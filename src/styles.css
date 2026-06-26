@@ -674,3 +674,15 @@ img { max-width: 100%; display: block; }
 
   .social-grid { grid-template-columns: 1fr; }
 }
+
+/* ── APP SHOWCASE GRID RESPONSIVE ── */
+@media (max-width: 900px) {
+  .section { padding: 60px 20px; }
+}
+
+@media (max-width: 768px) {
+  /* App grid goes to 1 column on mobile */
+  div[style*="repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}

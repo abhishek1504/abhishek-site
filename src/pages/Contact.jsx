@@ -22,6 +22,14 @@ export default function Contact() {
                 </div>
                 <div className="contact-link-arrow">→</div>
               </a>
+              <a href="https://abhishek1504.netlify.app" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <div className="contact-link-icon">🌐</div>
+                <div className="contact-link-text">
+                  <div className="contact-link-label">Website</div>
+                  <div className="contact-link-value">abhishek1504.netlify.app</div>
+                </div>
+                <div className="contact-link-arrow">→</div>
+              </a>
               <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" className="contact-link">
                 <div className="contact-link-icon">💼</div>
                 <div className="contact-link-text">

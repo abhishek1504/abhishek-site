@@ -16,7 +16,7 @@ export default function Home() {
           <span className="hero-role-tag">Runner · 100 Days</span>
         </div>
         <p className="hero-desc">
-          12 years building high-performance products. AVP Engineering at GajiGesa,
+          13 years building high-performance products. AVP Engineering at GajiGesa,
           leading the frontend for an EWA platform serving 25,000+ users.
           Off the keyboard — PBEL Chess Championship 2025 winner, and still running.
         </p>
