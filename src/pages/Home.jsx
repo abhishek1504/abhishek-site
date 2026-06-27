@@ -9,8 +9,8 @@ export default function Home() {
           ABHISHEK<br /><span>SHARMA</span>
         </h1>
         <div className="hero-roles">
-          <span className="hero-role-tag active">Frontend Eng. Manager</span>
-          <span className="hero-role-tag">React & React Native</span>
+          <span className="hero-role-tag active">Product Eng. Manager</span>
+          <span className="hero-role-tag">React · React Native · NestJS</span>
           <span className="hero-role-tag">Fintech · 12 yrs</span>
           <span className="hero-role-tag">PBEL Chess Champion 2025</span>
           <span className="hero-role-tag">Runner · 100 Days</span>

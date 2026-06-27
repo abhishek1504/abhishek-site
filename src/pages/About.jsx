@@ -8,7 +8,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text">
             <p>
-              I'm <strong>Abhishek Sharma</strong> — a Frontend Engineering Manager based in
+              I'm <strong>Abhishek Sharma</strong> — a Product Engineering Manager based in
               Hyderabad, India, with 13+ years of experience building products that people
               actually use. I started writing code in 2013 and haven't stopped since,
               working my way through mobile apps, enterprise systems, and most recently

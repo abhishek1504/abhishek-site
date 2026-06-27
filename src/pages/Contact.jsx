@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="contact-layout">
           <div>
             <p className="contact-intro">
-              I'm open to <strong>frontend engineering manager roles</strong>, conversations
+              I'm open to <strong>product engineering manager and fullstack engineering roles</strong>, conversations
               about fintech, React Native architecture, or just a good chess game.
               Reach out — I respond to real messages from real people.
             </p>
@@ -65,7 +65,7 @@ export default function Contact() {
             <div style={{ marginTop: 40, padding: "24px", border: "1px solid #1A1A1A", background: "#0F0F0F" }}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY OPEN TO</div>
               {[
-                "Frontend Engineering Manager roles",
+                "Product Engineering Manager roles",
                 "Staff / Principal Engineer positions",
                 "Fintech & consumer product companies",
                 "Bengaluru · Hyderabad · Remote",
