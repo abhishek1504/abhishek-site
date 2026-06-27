@@ -73,6 +73,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Chess Pipeline project teaser */}
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "2px 40px 80px" }}>
+        <div style={{ background: "#0A0A0A", border: "1px solid #1A1A1A", borderTop: "none", padding: "32px 40px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
+          <div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 10 }}>// SIDE PROJECT · LIVE IN PRODUCTION</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 32, color: "#F5F4F0", letterSpacing: 1, marginBottom: 6 }}>Chess Pipeline</div>
+            <div style={{ fontSize: 14, color: "#555" }}>Automated pipeline · Chess.com → Video analysis → YouTube · Runs daily via GitHub Actions</div>
+          </div>
+          <div style={{ display: "flex", gap: 12 }}>
+            <a href="/projects" className="btn-primary" style={{ fontSize: 12 }}>See How It Works</a>
+            <a href="https://www.youtube.com/@indianthinkingathlete" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: 12 }}>Watch on YouTube</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

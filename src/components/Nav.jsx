@@ -12,6 +12,7 @@ export default function Nav() {
           ["/", "Home"],
           ["/about", "About"],
           ["/work", "Work"],
+          ["/projects", "Projects"],
           ["/chess", "Chess"],
           ["/running", "Running"],
           ["/contact", "Contact"],
