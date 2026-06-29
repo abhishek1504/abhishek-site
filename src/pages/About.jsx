@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="page fade-in">
       <div className="section">
-        <div className="section-label">// Who I am</div>
+        <div className="section-label">Who I am</div>
         <h1 className="section-title">ABOUT<br /><span>ME</span></h1>
 
         <div className="about-grid">
@@ -55,12 +55,12 @@ export default function About() {
               ))}
             </div>
 
-            <div style={{ marginTop: 32, padding: "24px", border: "1px solid #1A1A1A", background: "#0F0F0F" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY</div>
-              <div style={{ fontSize: 15, color: "#888", lineHeight: 1.7 }}>
-                AVP Engineering at <span style={{ color: "#F5F4F0" }}>Kredivo Group</span> (formerly GajiGesa) · 
+            <div style={{ marginTop: 32, padding: "24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY</div>
+              <div style={{ fontSize: 15, color: "var(--gray-4)", lineHeight: 1.7 }}>
+                AVP Engineering at <span style={{ color: "var(--white)" }}>Kredivo Group</span> (formerly GajiGesa) · 
                 Exploring new opportunities in frontend engineering leadership ·
-                Building <span style={{ color: "#F5F4F0" }}>The Thinking Athlete</span> brand.
+                Building <span style={{ color: "var(--white)" }}>The Thinking Athlete</span> brand.
               </div>
             </div>
           </div>

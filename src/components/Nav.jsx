@@ -15,6 +15,7 @@ export default function Nav() {
           ["/projects", "Projects"],
           ["/chess", "Chess"],
           ["/running", "Running"],
+          ["/certifications", "Certs"],
           ["/contact", "Contact"],
         ].map(([to, label]) => (
           <li key={to}>

@@ -2,7 +2,7 @@ export default function Running() {
   return (
     <div className="page fade-in">
       <div className="section">
-        <div className="section-label">// One foot in front of the other</div>
+        <div className="section-label">One foot in front of the other</div>
         <h1 className="section-title">RUNNING &<br /><span>DISCIPLINE</span></h1>
 
         <p className="running-intro">
@@ -19,7 +19,7 @@ export default function Running() {
         </p>
 
         {/* Photo strip */}
-        <div style={{ marginTop: 56, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "#1A1A1A" }}>
+        <div style={{ marginTop: 56, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "var(--gray-1)" }}>
           <div style={{ position: "relative", overflow: "hidden", aspectRatio: "3/4" }}>
             <img
               src="/running-night.jpg"
@@ -27,8 +27,8 @@ export default function Running() {
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.85)" }}
             />
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 20px", background: "linear-gradient(transparent, rgba(0,0,0,0.8)" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2 }}>NIGHT RUN</div>
-              <div style={{ fontSize: 13, color: "#888", marginTop: 4 }}>The city belongs to runners after dark</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2 }}>NIGHT RUN</div>
+              <div style={{ fontSize: 14, color: "var(--gray-4)", marginTop: 4 }}>The city belongs to runners after dark</div>
             </div>
           </div>
           <div style={{ position: "relative", overflow: "hidden", aspectRatio: "3/4" }}>
@@ -38,8 +38,8 @@ export default function Running() {
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.85)" }}
             />
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 20px", background: "linear-gradient(transparent, rgba(0,0,0,0.8)" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2 }}>MORNING RUN</div>
-              <div style={{ fontSize: 13, color: "#888", marginTop: 4 }}>100 Days of Running — still going</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2 }}>MORNING RUN</div>
+              <div style={{ fontSize: 14, color: "var(--gray-4)", marginTop: 4 }}>100 Days of Running — still going</div>
             </div>
           </div>
         </div>
@@ -76,14 +76,14 @@ export default function Running() {
         </div>
 
         {/* The Thinking Athlete tie-in */}
-        <div style={{ marginTop: 64, padding: "48px 40px", border: "1px solid #1A1A1A", background: "#0F0F0F", position: "relative", overflow: "hidden" }}>
-          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 120, color: "#1A1A1A", position: "absolute", right: -20, top: "50%", transform: "translateY(-50%)", lineHeight: 1, pointerEvents: "none" }}>TA</div>
+        <div style={{ marginTop: 64, padding: "48px 40px", border: "1px solid var(--gray-2)", background: "var(--gray-1)", position: "relative", overflow: "hidden" }}>
+          <div style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: 120, color: "#1A1A1A", position: "absolute", right: -20, top: "50%", transform: "translateY(-50%)", lineHeight: 1, pointerEvents: "none" }}>TA</div>
           <div style={{ position: "relative", zIndex: 1, maxWidth: 540 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 3, marginBottom: 16 }}>// THE BRAND</div>
-            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, color: "#F5F4F0", letterSpacing: 1, marginBottom: 16 }}>THE THINKING ATHLETE</div>
-            <p style={{ fontSize: 15, color: "#555", lineHeight: 1.8, marginBottom: 24 }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 3, marginBottom: 16 }}>THE BRAND</div>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: 42, color: "var(--white)", letterSpacing: 1, marginBottom: 16 }}>THE THINKING ATHLETE</div>
+            <p style={{ fontSize: 15, color: "var(--gray-4)", lineHeight: 1.8, marginBottom: 24 }}>
               A chess tournament winner and a consistent runner — the same person.
-              The Thinking Athlete is built around the idea that <span style={{ color: "#F5F4F0" }}>mental and physical performance are the same thing</span> — trained the same way, through consistency, reflection, and the willingness to keep showing up.
+              The Thinking Athlete is built around the idea that <span style={{ color: "var(--white)" }}>mental and physical performance are the same thing</span> — trained the same way, through consistency, reflection, and the willingness to keep showing up.
             </p>
             <a
               href="https://instagram.com"

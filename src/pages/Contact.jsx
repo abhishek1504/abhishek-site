@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div className="page fade-in">
       <div className="section">
-        <div className="section-label">// Let's talk</div>
+        <div className="section-label">Let's talk</div>
         <h1 className="section-title">GET IN<br /><span>TOUCH</span></h1>
 
         <div className="contact-layout">
@@ -43,7 +43,7 @@ export default function Contact() {
 
           <div>
             <div className="contact-social">
-              <div className="contact-social-title">// Find me elsewhere</div>
+              <div className="contact-social-title">Find me elsewhere</div>
               <div className="social-grid">
                 {[
                   { icon: "🐙", label: "GitHub", url: "https://github.com/abhishek1504", handle: "@abhishek1504" },
@@ -54,7 +54,7 @@ export default function Contact() {
                   <a key={label} href={url} target="_blank" rel="noopener noreferrer" className="social-link">
                     <span style={{ fontSize: 18 }}>{icon}</span>
                     <div>
-                      <div style={{ fontSize: 12, color: "#555", marginBottom: 2 }}>{label}</div>
+                      <div style={{ fontSize: 12, color: "var(--gray-4)", marginBottom: 2 }}>{label}</div>
                       <div style={{ fontSize: 13 }}>{handle}</div>
                     </div>
                   </a>
@@ -62,16 +62,16 @@ export default function Contact() {
               </div>
             </div>
 
-            <div style={{ marginTop: 40, padding: "24px", border: "1px solid #1A1A1A", background: "#0F0F0F" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY OPEN TO</div>
+            <div style={{ marginTop: 40, padding: "24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY OPEN TO</div>
               {[
                 "Product Engineering Manager roles",
                 "Staff / Principal Engineer positions",
                 "Fintech & consumer product companies",
                 "Bengaluru · Hyderabad · Remote",
               ].map(item => (
-                <div key={item} style={{ fontSize: 14, color: "#888", paddingLeft: 16, position: "relative", marginBottom: 8, lineHeight: 1.6 }}>
-                  <span style={{ position: "absolute", left: 0, color: "#C9A84C" }}>→</span>
+                <div key={item} style={{ fontSize: 14, color: "var(--gray-4)", paddingLeft: 16, position: "relative", marginBottom: 8, lineHeight: 1.6 }}>
+                  <span style={{ position: "absolute", left: 0, color: "var(--gold)" }}>→</span>
                   {item}
                 </div>
               ))}

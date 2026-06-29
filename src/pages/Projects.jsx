@@ -2,37 +2,37 @@ export default function Projects() {
   return (
     <div className="page fade-in">
       <div className="section">
-        <div className="section-label">// Things I've built outside work</div>
+        <div className="section-label">Things I've built outside work</div>
         <h1 className="section-title">SIDE<br /><span>PROJECTS</span></h1>
 
-        <p style={{ fontSize: 16, color: "#555", lineHeight: 1.8, maxWidth: 600, marginBottom: 80 }}>
+        <p style={{ fontSize: 16, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 600, marginBottom: 80 }}>
           The best engineers build things for themselves. These are projects born from
           personal interests — chess, running, automation — that ended up becoming
           genuinely interesting engineering problems.
         </p>
 
         {/* Chess Pipeline — main project */}
-        <div style={{ border: "1px solid #1A1A1A", background: "#0A0A0A", marginBottom: 40 }}>
+        <div style={{ border: "1px solid var(--gray-2)", background: "var(--black)", marginBottom: 40 }}>
 
           {/* Header */}
-          <div style={{ padding: "40px 40px 32px", borderBottom: "1px solid #1A1A1A", display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 20 }}>
+          <div style={{ padding: "40px 40px 32px", borderBottom: "1px solid var(--gray-2)", display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 20 }}>
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 3, marginBottom: 12 }}>// AUTOMATION · PIPELINE · PYTHON</div>
-              <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 48, color: "#F5F4F0", letterSpacing: 1, lineHeight: 0.95, marginBottom: 12 }}>CHESS<br />PIPELINE</h2>
-              <div style={{ fontSize: 14, color: "#555" }}>Automated chess content generation · Live on YouTube daily</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 3, marginBottom: 12 }}>AUTOMATION · PIPELINE · PYTHON</div>
+              <h2 style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: 48, color: "var(--white)", letterSpacing: 1, lineHeight: 0.95, marginBottom: 12 }}>CHESS<br />PIPELINE</h2>
+              <div style={{ fontSize: 14, color: "var(--gray-4)" }}>Automated chess content generation · Live on YouTube daily</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
               <a href="https://www.youtube.com/@indianthinkingathlete" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 12 }}>
                 Watch on YouTube →
               </a>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#444", letterSpacing: 1 }}>Runs daily @ 11 PM IST</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gray-4)", letterSpacing: 1 }}>Runs daily @ 11 PM IST</span>
             </div>
           </div>
 
           {/* What it does */}
-          <div style={{ padding: "32px 40px", borderBottom: "1px solid #1A1A1A" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 20 }}>WHAT IT DOES</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 2, background: "#1A1A1A" }}>
+          <div style={{ padding: "32px 40px", borderBottom: "1px solid var(--gray-2)" }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 20 }}>WHAT IT DOES</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 2, background: "var(--gray-1)" }}>
               {[
                 { step: "01", title: "Fetch", desc: "Pulls daily chess games from Chess.com public API. Filters by result — only wins go through." },
                 { step: "02", title: "Analyse", desc: "Scores each game 0–100 using python-chess PGN analysis. Detects hanging pieces, missed captures, brilliant moves, checkmates. Only games scoring ≥70 are published." },
@@ -41,18 +41,18 @@ export default function Projects() {
                 { step: "05", title: "Metadata", desc: "Generates titles, descriptions, and hashtags deterministically from PGN data — opening name, opponent rating, result, key moments." },
                 { step: "06", title: "Publish", desc: "Uploads both video formats to YouTube via Data API v3. Fully automated — zero manual steps from game played to video live." },
               ].map(({ step, title, desc }) => (
-                <div key={step} style={{ background: "#0A0A0A", padding: "28px 24px" }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", marginBottom: 8 }}>{step}</div>
-                  <div style={{ fontSize: 16, fontWeight: 700, color: "#F5F4F0", marginBottom: 10 }}>{title}</div>
-                  <div style={{ fontSize: 13, color: "#555", lineHeight: 1.7 }}>{desc}</div>
+                <div key={step} style={{ background: "var(--black)", padding: "28px 24px" }}>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", marginBottom: 8 }}>{step}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: "var(--white)", marginBottom: 10 }}>{title}</div>
+                  <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>{desc}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Engineering decisions */}
-          <div style={{ padding: "32px 40px", borderBottom: "1px solid #1A1A1A" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 20 }}>INTERESTING ENGINEERING DECISIONS</div>
+          <div style={{ padding: "32px 40px", borderBottom: "1px solid var(--gray-2)" }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 20 }}>INTERESTING ENGINEERING DECISIONS</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {[
                 {
@@ -72,9 +72,9 @@ export default function Projects() {
                   why: "No server, no cron job on a VPS, no cost. GitHub Actions runs the full pipeline daily at 11 PM IST. The pipeline is stateless — pulls fresh data each run, processes, publishes, exits."
                 },
               ].map(({ decision, why }) => (
-                <div key={decision} style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, padding: "20px 0", borderBottom: "1px solid #111" }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: "#F5F4F0", lineHeight: 1.5 }}>{decision}</div>
-                  <div style={{ fontSize: 14, color: "#555", lineHeight: 1.7 }}>{why}</div>
+                <div key={decision} style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, padding: "20px 0", borderBottom: "1px solid var(--gray-2)" }}>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "var(--white)", lineHeight: 1.5 }}>{decision}</div>
+                  <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>{why}</div>
                 </div>
               ))}
             </div>
@@ -82,24 +82,24 @@ export default function Projects() {
 
           {/* Stack */}
           <div style={{ padding: "32px 40px" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 20 }}>TECH STACK</div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 20 }}>TECH STACK</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {[
                 "Python 3.11", "python-chess", "Pillow", "imageio", "libx264",
                 "FFmpeg", "GitHub Actions", "Chess.com API", "YouTube Data API v3",
                 "google-api-python-client", "PGN Analysis", "Cron Scheduling"
               ].map(t => (
-                <span key={t} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "6px 14px", background: "#1A1A1A", color: "#888", border: "1px solid #222" }}>{t}</span>
+                <span key={t} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "6px 14px", background: "var(--gray-1)", color: "var(--gray-4)", border: "1px solid var(--gray-2)" }}>{t}</span>
               ))}
             </div>
           </div>
         </div>
 
         {/* What's next box */}
-        <div style={{ padding: "32px 40px", border: "1px solid #C9A84C22", background: "#0F0F0F" }}>
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 16 }}>// WHAT'S NEXT</div>
-          <p style={{ fontSize: 15, color: "#555", lineHeight: 1.8, maxWidth: 640, marginBottom: 20 }}>
-            The pipeline is running. Next logical steps are adding <span style={{ color: "#F5F4F0" }}>LLM-generated move commentary</span> back in (now that the base pipeline is stable and cost-justified), and potentially open-sourcing the project once secrets are fully externalized.
+        <div style={{ padding: "32px 40px", border: "1px solid #C9A84C22", background: "var(--gray-1)" }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 16 }}>WHAT'S NEXT</div>
+          <p style={{ fontSize: 15, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 640, marginBottom: 20 }}>
+            The pipeline is running. Next logical steps are adding <span style={{ color: "var(--white)" }}>LLM-generated move commentary</span> back in (now that the base pipeline is stable and cost-justified), and potentially open-sourcing the project once secrets are fully externalized.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a href="https://www.youtube.com/@indianthinkingathlete" target="_blank" rel="noopener noreferrer" className="btn-outline">

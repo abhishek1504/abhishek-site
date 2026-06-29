@@ -154,34 +154,34 @@ export default function Work() {
   return (
     <div className="page fade-in">
       <div className="section">
-        <div className="section-label">// Apps & products I've built</div>
+        <div className="section-label">Apps & products I've built</div>
         <h1 className="section-title">MY<br /><span>WORK</span></h1>
 
-        <p style={{ fontSize: 16, color: "#555", lineHeight: 1.8, maxWidth: 600, marginBottom: 64 }}>
+        <p style={{ fontSize: 16, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 600, marginBottom: 64 }}>
           13 years across startups, consulting giants, and fintech. From global brands
           like KFC and Tractor Supply to building a fintech platform from scratch —
           always focused on fast, reliable, user-first frontend engineering.
         </p>
 
         {/* App showcase grid */}
-        <div className="section-label" style={{ marginBottom: 24 }}>// Product showcase</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2, background: "#1A1A1A", marginBottom: 80 }}>
+        <div className="section-label" style={{ marginBottom: 24 }}>Product showcase</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2, background: "var(--gray-1)", marginBottom: 80 }}>
           {apps.map((app) => (
-            <div key={app.name} style={{ background: "#0A0A0A", padding: "32px 28px", display: "flex", flexDirection: "column", gap: 0, transition: "background 0.2s" }}
+            <div key={app.name} style={{ background: "var(--black)", padding: "32px 28px", display: "flex", flexDirection: "column", gap: 0, transition: "background 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.background = "#111"}
               onMouseLeave={e => e.currentTarget.style.background = "#0A0A0A"}
             >
               {/* App icon */}
               <div style={{ width: 56, height: 56, borderRadius: 14, background: app.bgColor, border: `1px solid ${app.color}22`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: app.letter.length > 2 ? 13 : 18, color: app.color, letterSpacing: 1 }}>{app.letter}</span>
+                <span style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: app.letter.length > 2 ? 13 : 18, color: app.color, letterSpacing: 1 }}>{app.letter}</span>
               </div>
 
               {/* Meta */}
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#444", letterSpacing: 2, marginBottom: 8, textTransform: "uppercase" }}>{app.category}</div>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "#F5F4F0", marginBottom: 4 }}>{app.name}</div>
-              <div style={{ fontSize: 12, color: "#555", marginBottom: 16 }}>{app.platform} · {app.users}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gray-4)", letterSpacing: 2, marginBottom: 8, textTransform: "uppercase" }}>{app.category}</div>
+              <div style={{ fontSize: 17, fontWeight: 700, color: "var(--white)", marginBottom: 4 }}>{app.name}</div>
+              <div style={{ fontSize: 12, color: "var(--gray-4)", marginBottom: 16 }}>{app.platform} · {app.users}</div>
 
-              <p style={{ fontSize: 13, color: "#444", lineHeight: 1.7, marginBottom: 20, flex: 1 }}>{app.desc}</p>
+              <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7, marginBottom: 20, flex: 1 }}>{app.desc}</p>
 
               {/* Highlights */}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
@@ -193,7 +193,7 @@ export default function Work() {
               {/* Tech stack */}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 {app.tech.map(t => (
-                  <span key={t} style={{ fontSize: 11, padding: "3px 8px", background: "#1A1A1A", color: "#555", fontFamily: "'JetBrains Mono', monospace" }}>{t}</span>
+                  <span key={t} style={{ fontSize: 11, padding: "3px 8px", background: "var(--gray-1)", color: "var(--gray-4)", fontFamily: "'JetBrains Mono', monospace" }}>{t}</span>
                 ))}
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function Work() {
         </div>
 
         {/* Career Timeline */}
-        <div className="section-label" style={{ marginBottom: 32 }}>// Career timeline</div>
+        <div className="section-label" style={{ marginBottom: 32 }}>Career timeline</div>
         <div className="timeline">
           {jobs.map((job) => (
             <div key={job.role + job.company} className={`timeline-item${job.current ? " current" : ""}`}>
@@ -221,24 +221,24 @@ export default function Work() {
         </div>
 
         {/* Education */}
-        <div style={{ marginTop: 80, paddingTop: 80, borderTop: "1px solid #1A1A1A" }}>
-          <div className="section-label" style={{ marginBottom: 24 }}>// Education</div>
+        <div style={{ marginTop: 80, paddingTop: 80, borderTop: "1px solid var(--gray-2)" }}>
+          <div className="section-label" style={{ marginBottom: 24 }}>Education</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             {[
               { degree: "Masters in Computer Applications", school: "HNB Garhwal University · IMS Dehradun", year: "2005 – 2008" },
               { degree: "B.Sc. Mathematics", school: "Delhi University", year: "2002 – 2005" },
             ].map(({ degree, school, year }) => (
-              <div key={degree} style={{ padding: "28px 24px", border: "1px solid #1A1A1A", background: "#0F0F0F" }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 10 }}>{year}</div>
-                <div style={{ fontSize: 17, fontWeight: 600, color: "#F5F4F0", marginBottom: 4 }}>{degree}</div>
-                <div style={{ fontSize: 13, color: "#555" }}>{school}</div>
+              <div key={degree} style={{ padding: "28px 24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 10 }}>{year}</div>
+                <div style={{ fontSize: 17, fontWeight: 600, color: "var(--white)", marginBottom: 4 }}>{degree}</div>
+                <div style={{ fontSize: 14, color: "var(--gray-4)" }}>{school}</div>
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 24, padding: "24px", border: "1px solid #C9A84C22", background: "#0F0F0F", maxWidth: 480 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#C9A84C", letterSpacing: 2, marginBottom: 8 }}>CERTIFICATION</div>
-            <div style={{ fontSize: 16, fontWeight: 600, color: "#F5F4F0", marginBottom: 4 }}>GenAI & Agentic AI</div>
-            <div style={{ fontSize: 13, color: "#555" }}>IIT Roorkee & Futurense</div>
+          <div style={{ marginTop: 24, padding: "24px", border: "1px solid #C9A84C22", background: "var(--gray-1)", maxWidth: 480 }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 8 }}>CERTIFICATION</div>
+            <div style={{ fontSize: 16, fontWeight: 600, color: "var(--white)", marginBottom: 4 }}>GenAI & Agentic AI</div>
+            <div style={{ fontSize: 14, color: "var(--gray-4)" }}>IIT Roorkee & Futurense</div>
           </div>
         </div>
       </div>
