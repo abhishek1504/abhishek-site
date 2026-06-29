@@ -16,14 +16,14 @@ export default function Home() {
 
         {/* Left — identity */}
         <div>
-          <div className="hero-eyebrow">Engineer · Chess Champion · Runner</div>
+          <div className="hero-eyebrow">Forward Deployed Engineer · Chess Champion · Runner</div>
           <h1 className="hero-name">
             ABHISHEK<br /><span>SHARMA</span>
           </h1>
           <div className="hero-roles">
-            <span className="hero-role-tag active">Product Eng. Manager</span>
-            <span className="hero-role-tag">React · React Native · NestJS</span>
-            <span className="hero-role-tag">Fintech · 13 yrs</span>
+            <span className="hero-role-tag active">Forward Deployed Engineer</span>
+            <span className="hero-role-tag">React · React Native · GCP · AWS</span>
+            <span className="hero-role-tag">Firebase · MongoDB · MoEngage</span>
             <span className="hero-role-tag">PBEL Chess Champion 2025</span>
             <span className="hero-role-tag">Runner · 100 Days</span>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
           <div>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 10 }}>SIDE PROJECT · LIVE IN PRODUCTION</div>
             <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 28, fontWeight: 800, color: "var(--white)", letterSpacing: 0.5, marginBottom: 6 }}>Chess Pipeline</div>
-            <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>Automated pipeline · Chess.com → Video analysis → YouTube · Runs daily via GitHub Actions</div>
+            <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>Automated Python pipeline · Chess.com → PGN analysis → Video generation → YouTube · GitHub Actions · No LLM, fully deterministic</div>
           </div>
           <div style={{ display: "flex", gap: 12 }}>
             <a href="/projects" className="btn-primary" style={{ fontSize: 12 }}>See How It Works</a>

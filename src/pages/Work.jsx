@@ -10,8 +10,8 @@ const apps = [
     users: "25,000+ MAU",
     role: "Lead Architect & Manager",
     desc: "Earned Wage Access platform allowing workers to withdraw earned salary before payday. Built on a single React Native codebase serving both mobile and web.",
-    highlights: ["Apdex 0.1 → 0.7", "99.5% crash-free", "35% perf gain", "<1% code duplication"],
-    tech: ["React Native", "TypeScript", "SonarQube", "Maestro"],
+    highlights: ["Apdex 0.1 → 0.7", "99.5% crash-free", "GCP + Firebase infra", "MoEngage engagement", "<1% code duplication"],
+    tech: ["React Native", "TypeScript", "GCP", "Firebase", "MongoDB", "MoEngage", "SonarQube", "Maestro"],
   },
   {
     name: "GajiGesa Web",
@@ -25,7 +25,7 @@ const apps = [
     role: "Lead Frontend Engineer",
     desc: "Web counterpart to the mobile EWA app — same React Native codebase, unified design system, serving HR teams and employees on desktop browsers.",
     highlights: ["Shared codebase with mobile", "React Native Web", "Performance optimized"],
-    tech: ["React Native Web", "TypeScript", "Jest", "ESLint"],
+    tech: ["React Native Web", "TypeScript", "AWS", "Firebase Analytics", "Jest", "ESLint"],
   },
   {
     name: "HR Dashboard",
@@ -39,7 +39,7 @@ const apps = [
     role: "Lead Frontend Engineer",
     desc: "Internal HR dashboard enabling companies to manage employee salary access, track usage, configure EWA policies and view payroll analytics in real time.",
     highlights: ["Real-time analytics", "Payroll integration", "Multi-tenant"],
-    tech: ["React JS", "TypeScript", "Performance Monitoring"],
+    tech: ["React JS", "TypeScript", "MongoDB", "Firebase", "MoEngage", "Performance Monitoring"],
   },
   {
     name: "KFC Mobile App",
@@ -93,13 +93,17 @@ const jobs = [
     location: "Hyderabad, IN",
     current: true,
     bullets: [
-      "Led frontend engineering for 3 products: the GajiGesa EWA mobile app, its web counterpart, and an HR dashboard — collectively serving 25,000+ monthly active users.",
+      "Owned the full product stack for 3 products — GajiGesa EWA mobile app, web platform, and HR dashboard — serving 25,000+ monthly active users across mobile and web.",
       "Made the architectural decision to adopt React Native for both mobile and web, eliminating duplicate codebases and accelerating feature delivery across platforms.",
+      "Managed GCP and AWS cloud infrastructure — deployments, environment configuration, and CI/CD pipelines for production systems.",
+      "Instrumented Firebase Performance Monitoring and Analytics across mobile and web, enabling data-driven decisions on crash rates, render times, and user flows.",
+      "Integrated MoEngage for push notifications, in-app messaging, and user lifecycle campaigns — directly improving retention and re-engagement.",
+      "Built MongoDB data access layers and integrated NoSQL with Firebase Firestore for real-time features across the EWA platform.",
       "Improved Apdex score from 0.1 to 0.7 by optimizing API calls, memoizing React components, and reducing render cycles.",
       "Achieved 99.5%+ crash-free rate by migrating away from the deprecated NativeBase library and building an in-house component library.",
       "Reduced code duplication to under 1% by introducing SonarQube into the CI pipeline and enforcing code quality standards.",
     ],
-    tags: ["React Native", "React JS", "TypeScript", "SonarQube", "Performance", "Fintech"],
+    tags: ["React Native", "React JS", "TypeScript", "GCP", "AWS", "Firebase", "MongoDB", "MoEngage", "SonarQube", "Fintech"],
   },
   {
     role: "Head of Mobility",
@@ -160,7 +164,8 @@ export default function Work() {
         <p style={{ fontSize: 16, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 600, marginBottom: 64 }}>
           13 years across startups, consulting giants, and fintech. From global brands
           like KFC and Tractor Supply to building a fintech platform from scratch —
-          always focused on fast, reliable, user-first frontend engineering.
+          owning the full stack: React Native frontends, GCP and AWS infrastructure,
+          MongoDB data layers, Firebase observability, and MoEngage engagement pipelines.
         </p>
 
         {/* App showcase grid */}

@@ -8,9 +8,10 @@ export default function Contact() {
         <div className="contact-layout">
           <div>
             <p className="contact-intro">
-              I'm open to <strong>product engineering manager and fullstack engineering roles</strong>, conversations
-              about fintech, React Native architecture, or just a good chess game.
-              Reach out — I respond to real messages from real people.
+              I'm open to <strong>Forward Deployed Engineer, Engineering Manager, and Staff Engineer roles</strong> —
+              fintech, consumer, or platform engineering. Comfortable across the stack:
+              React Native, GCP, Firebase, MongoDB, MoEngage. Or just reach out for a good chess game.
+              I respond to real messages from real people.
             </p>
 
             <div className="contact-links">
@@ -65,9 +66,10 @@ export default function Contact() {
             <div style={{ marginTop: 40, padding: "24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY OPEN TO</div>
               {[
-                "Product Engineering Manager roles",
-                "Staff / Principal Engineer positions",
-                "Fintech & consumer product companies",
+                "Forward Deployed Engineer roles",
+                "Engineering Manager / Staff Engineer positions",
+                "Fintech, consumer & platform companies",
+                "Full-stack · Cloud · Mobile · Data",
                 "Bengaluru · Hyderabad · Remote",
               ].map(item => (
                 <div key={item} style={{ fontSize: 14, color: "var(--gray-4)", paddingLeft: 16, position: "relative", marginBottom: 8, lineHeight: 1.6 }}>
