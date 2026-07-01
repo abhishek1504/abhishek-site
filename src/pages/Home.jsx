@@ -16,14 +16,14 @@ export default function Home() {
 
         {/* Left — identity */}
         <div>
-          <div className="hero-eyebrow">Forward Deployed Engineer · Chess Champion · Runner</div>
+          <div className="hero-eyebrow">Full-Stack · Forward Deployed · Chess Champion · Runner</div>
           <h1 className="hero-name">
             ABHISHEK<br /><span>SHARMA</span>
           </h1>
           <div className="hero-roles">
-            <span className="hero-role-tag active">Forward Deployed Engineer</span>
+            <span className="hero-role-tag active">Full-Stack Engineer</span>
             <span className="hero-role-tag">React · React Native · GCP · AWS</span>
-            <span className="hero-role-tag">Firebase · MongoDB · MoEngage</span>
+            <span className="hero-role-tag">Forward Deployed Engineer</span>
             <span className="hero-role-tag">PBEL Chess Champion 2025</span>
             <span className="hero-role-tag">Runner · 100 Days</span>
           </div>
@@ -52,7 +52,7 @@ export default function Home() {
           <div style={heroDivider} />
           <div style={heroTag}>
             <span style={heroTagDot} />
-            Available for senior engineering leadership roles
+            Open to Full-Stack · Forward Deployed · EM roles
           </div>
         </div>
 
@@ -116,6 +116,36 @@ export default function Home() {
           <div style={{ display: "flex", gap: 12 }}>
             <a href="/projects" className="btn-primary" style={{ fontSize: 12 }}>See How It Works</a>
             <a href="https://www.youtube.com/@indianthinkingathlete" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: 12 }}>Watch on YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      {/* SEO content block — visible to crawlers, styled subtly */}
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px 60px", borderTop: "1px solid var(--gray-2)", paddingTop: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }}>
+          <div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>WHAT IS A FORWARD DEPLOYED ENGINEER?</div>
+            <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.8 }}>
+              A Forward Deployed Engineer (FDE) works end-to-end — from writing code to deploying
+              infrastructure to working directly with customers and data. Unlike a traditional frontend
+              or backend engineer, an FDE owns the full problem: UI, API, cloud, database, and analytics.
+              Abhishek Sharma is a Forward Deployed Engineer based in Hyderabad, India with 13+ years
+              of experience across React Native, GCP, AWS, MongoDB, Firebase, and MoEngage.
+            </p>
+          </div>
+          <div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CONTACT</div>
+            <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.8 }}>
+              Looking for a Full-Stack or Forward Deployed Engineer in Hyderabad?
+              Reach out to <strong style={{ color: "var(--white)" }}>Abhishek Sharma</strong> at{" "}
+              <a href="mailto:abhisheksharma.dsc@gmail.com" style={{ color: "var(--gold)" }}>
+                abhisheksharma.dsc@gmail.com
+              </a>{" "}or connect on{" "}
+              <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>
+                LinkedIn
+              </a>.
+              Open to fintech, consumer, and platform engineering roles in Bengaluru, Hyderabad, or Remote.
+            </p>
           </div>
         </div>
       </div>

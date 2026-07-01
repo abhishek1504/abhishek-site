@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Main pages
+Allow: /about
+Allow: /work
+Allow: /projects
+Allow: /certifications
+Allow: /contact
+
+Sitemap: https://abhishek1504.netlify.app/sitemap.xml

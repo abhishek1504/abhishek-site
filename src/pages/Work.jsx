@@ -8,7 +8,7 @@ const apps = [
     letter: "G",
     platform: "iOS & Android",
     users: "25,000+ MAU",
-    role: "Lead Architect & Manager",
+    role: "Full-Stack Lead & Engineering Manager",
     desc: "Earned Wage Access platform allowing workers to withdraw earned salary before payday. Built on a single React Native codebase serving both mobile and web.",
     highlights: ["Apdex 0.1 → 0.7", "99.5% crash-free", "GCP + Firebase infra", "MoEngage engagement", "<1% code duplication"],
     tech: ["React Native", "TypeScript", "GCP", "Firebase", "MongoDB", "MoEngage", "SonarQube", "Maestro"],
@@ -93,7 +93,7 @@ const jobs = [
     location: "Hyderabad, IN",
     current: true,
     bullets: [
-      "Owned the full product stack for 3 products — GajiGesa EWA mobile app, web platform, and HR dashboard — serving 25,000+ monthly active users across mobile and web.",
+      "Owned the full product engineering stack end-to-end — React Native frontend, NestJS APIs, GCP cloud infrastructure, MongoDB database, and Firebase observability — for 3 products serving 25,000+ monthly active users.",
       "Made the architectural decision to adopt React Native for both mobile and web, eliminating duplicate codebases and accelerating feature delivery across platforms.",
       "Managed GCP and AWS cloud infrastructure — deployments, environment configuration, and CI/CD pipelines for production systems.",
       "Instrumented Firebase Performance Monitoring and Analytics across mobile and web, enabling data-driven decisions on crash rates, render times, and user flows.",
@@ -162,10 +162,10 @@ export default function Work() {
         <h1 className="section-title">MY<br /><span>WORK</span></h1>
 
         <p style={{ fontSize: 16, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 600, marginBottom: 64 }}>
-          13 years across startups, consulting giants, and fintech. From global brands
-          like KFC and Tractor Supply to building a fintech platform from scratch —
-          owning the full stack: React Native frontends, GCP and AWS infrastructure,
-          MongoDB data layers, Firebase observability, and MoEngage engagement pipelines.
+          13 years as a full-stack and forward deployed engineer — from global consumer
+          brands like KFC and Tractor Supply to building a fintech platform end-to-end.
+          I own the whole problem: React Native frontends, NestJS APIs, GCP and AWS
+          infrastructure, MongoDB and Firebase data layers, MoEngage engagement pipelines.
         </p>
 
         {/* App showcase grid */}
