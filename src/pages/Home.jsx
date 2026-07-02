@@ -1,226 +1,130 @@
 import { Link } from "react-router-dom";
 
+const evolution = [
+  { year: "2008", tech: "Delphi & Firebird" },
+  { year: "2011", tech: "iOS · Delphi Prism" },
+  { year: "2013", tech: "Objective-C → Titanium" },
+  { year: "2016", tech: "Kotlin · Native Android" },
+  { year: "2018", tech: "React · React Native" },
+  { year: "2022", tech: "Node.js · AWS · CI/CD" },
+  { year: "2025", tech: "Gen AI · Agentic AI" },
+];
+
 const stats = [
-  { num: "13",    label: "Years in Engineering" },
-  { num: "1000+", label: "Chess Games Played" },
-  { num: "100+",  label: "Days Running Streak" },
-  { num: "25K",   label: "MAU on My Products" },
+  { num: "17+", label: "Years building & shipping software" },
+  { num: "25K", label: "Monthly active users on my products" },
+  { num: "99.5%", label: "Crash-free users, sustained" },
+  { num: "0.9", label: "Apdex score achieved" },
+];
+
+const pillars = [
+  {
+    title: "Engineering leadership",
+    desc: "Founded and led mobility teams, managed vendors, and delivered production apps for KFC, Kohl's, Tractor Supply, Wallenius Wilhelmsen, and Hindustan Unilever.",
+  },
+  {
+    title: "Technical product management",
+    desc: "At Gajigesa (Kredivo Group), I own the product lifecycle end to end — roadmap, UX design, delivery, and performance — reporting to the Head of Engineering.",
+  },
+  {
+    title: "Applied AI",
+    desc: "PGCP in Generative & Agentic AI from IIT Roorkee, Anthropic Claude certifications, and a production AI-powered automation pipeline running daily on GitHub Actions.",
+  },
 ];
 
 export default function Home() {
   return (
     <div className="page fade-in">
-
-      {/* ── HERO ── */}
-      <section className="hero" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, alignItems: "center", minHeight: "calc(100vh - 64px)", padding: "80px 40px" }}>
-
-        {/* Left — identity */}
-        <div>
-          <div className="hero-eyebrow">Full-Stack · Forward Deployed · Chess Champion · Runner</div>
+      {/* ── Hero ── */}
+      <header className="hero">
+        <div className="wrap">
+          <div className="mono eyebrow">AVP · Technical Product Manager · Hyderabad, India</div>
           <h1 className="hero-name">
-            ABHISHEK<br /><span>SHARMA</span>
+            Seventeen years of<br />shipping products —<br />
+            <em>and still curious.</em>
           </h1>
-          <div className="hero-roles">
-            <span className="hero-role-tag active">Full-Stack Engineer</span>
-            <span className="hero-role-tag">React · React Native · GCP · AWS</span>
-            <span className="hero-role-tag">Forward Deployed Engineer</span>
-            <span className="hero-role-tag">PBEL Chess Champion 2025</span>
-            <span className="hero-role-tag">Runner · 100 Days</span>
-          </div>
           <p className="hero-desc">
-            13 years building high-performance products. AVP Engineering at GajiGesa,
-            leading the frontend for an EWA platform serving 25,000+ users.
-            Off the keyboard — PBEL Chess Championship 2025 winner, and still running.
+            I'm Abhishek Sharma. I lead product and engineering at Gajigesa (a Kredivo
+            Group company) — owning development, UX, and optimization for a consumer
+            fintech platform. Before that: mobile and web products for some of the
+            world's most recognized brands.
           </p>
           <div className="hero-cta">
-            <Link to="/work" className="btn-primary">View My Work</Link>
-            <Link to="/contact" className="btn-outline">Get In Touch</Link>
+            <Link to="/work" className="btn-primary">See my experience</Link>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">Download resume</a>
+          </div>
+
+          {/* Signature: stack evolution */}
+          <div className="evolution">
+            <div className="mono" style={{ color: "var(--slate)", marginBottom: 4 }}>
+              One career, seven stacks — I learn whatever the product needs
+            </div>
+            <div className="evolution-track" aria-label="Technology evolution timeline">
+              {evolution.map(({ year, tech }) => (
+                <div className="evo-node" key={year}>
+                  <div className="evo-dot" />
+                  <div className="mono evo-year">{year}</div>
+                  <div className="evo-tech display">{tech}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </header>
 
-        {/* Right — stats block */}
-        <div style={heroRight}>
-          <div style={statsLabel}>BY THE NUMBERS</div>
-          <div style={statsGrid}>
+      {/* ── Stats ── */}
+      <section className="section" style={{ paddingTop: 0, borderTop: "none" }}>
+        <div className="wrap">
+          <div className="stats">
             {stats.map(({ num, label }) => (
-              <div key={label} style={statCard}>
-                <div style={statNum}>{num}</div>
-                <div style={statLbl}>{label}</div>
+              <div className="stat" key={label}>
+                <div className="stat-num">{num}</div>
+                <div className="stat-label">{label}</div>
               </div>
             ))}
           </div>
-          <div style={heroDivider} />
-          <div style={heroTag}>
-            <span style={heroTagDot} />
-            Open to Full-Stack · Forward Deployed · EM roles
-          </div>
         </div>
-
       </section>
 
-      {/* ── IDENTITY STRIP ── */}
-      <div style={{ borderTop: "1px solid var(--gray-2)", borderBottom: "1px solid var(--gray-2)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-          {[
-            { icon: "💻", label: "Engineering", desc: "Frontend Manager · React · Fintech · 12 yrs · 25K MAU" },
-            { icon: "♟",  label: "Chess",       desc: "PBEL Chess Champion 2025 · The Thinking Athlete" },
-            { icon: "🏃", label: "Running",     desc: "100 Days of Running · Consistent lifestyle athlete" },
-          ].map(({ icon, label, desc }, i) => (
-            <div key={label} style={{ padding: "40px 32px", borderRight: i < 2 ? "1px solid var(--gray-2)" : "none" }}>
-              <div style={{ fontSize: 28, marginBottom: 12 }}>{icon}</div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 18, fontWeight: 800, color: "var(--gold)", letterSpacing: 1, marginBottom: 8 }}>{label}</div>
-              <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>{desc}</div>
+      {/* ── What I do ── */}
+      <section className="section">
+        <div className="wrap">
+          <div className="mono eyebrow">What I bring to a senior role</div>
+          <h2 className="section-title">Engineering depth.<br />Product ownership.</h2>
+          <p className="lede" style={{ marginBottom: 44 }}>
+            I can talk architecture with engineers in the morning and roadmap
+            trade-offs with stakeholders in the afternoon.
+          </p>
+          <div className="grid-3">
+            {pillars.map(({ title, desc }) => (
+              <div className="card" key={title}>
+                <h3 className="display" style={{ fontWeight: 800, fontSize: "1.15rem", marginBottom: 12 }}>{title}</h3>
+                <p style={{ fontSize: 15, color: "var(--slate)" }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Featured project ── */}
+      <section className="section">
+        <div className="wrap">
+          <div className="card" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24, padding: "38px 36px" }}>
+            <div style={{ maxWidth: 560 }}>
+              <div className="mono eyebrow" style={{ marginBottom: 10 }}>Featured project · Live in production</div>
+              <h3 className="display" style={{ fontWeight: 800, fontSize: "1.5rem", marginBottom: 8 }}>
+                AI-powered content automation pipeline
+              </h3>
+              <p style={{ fontSize: 15, color: "var(--slate)" }}>
+                A zero-touch Python pipeline that turns raw game data into published
+                YouTube videos daily — Claude API for metadata, FFmpeg rendering,
+                GitHub Actions scheduling. No servers, no manual steps.
+              </p>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ── TROPHY / IMAGES ── */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 40px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "var(--gray-2)" }}>
-          <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-            <img
-              src="/chess-trophy.jpg"
-              alt="PBEL Chess Championship 2025 winner"
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.8)" }}
-            />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.5), transparent)" }} />
-            <div style={{ position: "absolute", bottom: 24, left: 24 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 3, marginBottom: 8 }}>CHESS</div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 24, fontWeight: 800, color: "var(--white)" }}>PBEL Champion 2025</div>
-            </div>
-          </div>
-          <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-            <img
-              src="/running-night.jpg"
-              alt="Night run"
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%", filter: "brightness(0.8)" }}
-            />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.5), transparent)" }} />
-            <div style={{ position: "absolute", bottom: 24, left: 24 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 3, marginBottom: 8 }}>RUNNING</div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 24, fontWeight: 800, color: "var(--white)" }}>100 Days Strong</div>
-            </div>
+            <Link to="/projects" className="btn-primary">How it works</Link>
           </div>
         </div>
-      </div>
-
-      {/* ── CHESS PIPELINE TEASER ── */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "2px 40px 80px" }}>
-        <div style={{ background: "var(--gray-1)", border: "1px solid var(--gray-2)", borderTop: "none", padding: "32px 40px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
-          <div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 10 }}>SIDE PROJECT · LIVE IN PRODUCTION</div>
-            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 28, fontWeight: 800, color: "var(--white)", letterSpacing: 0.5, marginBottom: 6 }}>Chess Pipeline</div>
-            <div style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7 }}>Automated Python pipeline · Chess.com → PGN analysis → Video generation → YouTube · GitHub Actions · No LLM, fully deterministic</div>
-          </div>
-          <div style={{ display: "flex", gap: 12 }}>
-            <a href="/projects" className="btn-primary" style={{ fontSize: 12 }}>See How It Works</a>
-            <a href="https://www.youtube.com/@indianthinkingathlete" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: 12 }}>Watch on YouTube</a>
-          </div>
-        </div>
-      </div>
-
-      {/* SEO content block — visible to crawlers, styled subtly */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px 60px", borderTop: "1px solid var(--gray-2)", paddingTop: 48 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }}>
-          <div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>WHAT IS A FORWARD DEPLOYED ENGINEER?</div>
-            <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.8 }}>
-              A Forward Deployed Engineer (FDE) works end-to-end — from writing code to deploying
-              infrastructure to working directly with customers and data. Unlike a traditional frontend
-              or backend engineer, an FDE owns the full problem: UI, API, cloud, database, and analytics.
-              Abhishek Sharma is a Forward Deployed Engineer based in Hyderabad, India with 13+ years
-              of experience across React Native, GCP, AWS, MongoDB, Firebase, and MoEngage.
-            </p>
-          </div>
-          <div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CONTACT</div>
-            <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.8 }}>
-              Looking for a Full-Stack or Forward Deployed Engineer in Hyderabad?
-              Reach out to <strong style={{ color: "var(--white)" }}>Abhishek Sharma</strong> at{" "}
-              <a href="mailto:abhisheksharma.dsc@gmail.com" style={{ color: "var(--gold)" }}>
-                abhisheksharma.dsc@gmail.com
-              </a>{" "}or connect on{" "}
-              <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>
-                LinkedIn
-              </a>.
-              Open to fintech, consumer, and platform engineering roles in Bengaluru, Hyderabad, or Remote.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      </section>
     </div>
   );
 }
-
-/* ── Styles ── */
-const heroRight = {
-  padding: "0 0 0 60px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-};
-
-const statsLabel = {
-  fontFamily: "'JetBrains Mono', monospace",
-  fontSize: 10,
-  letterSpacing: "0.2em",
-  textTransform: "uppercase",
-  color: "var(--gold)",
-  marginBottom: 24,
-};
-
-const statsGrid = {
-  display: "grid",
-  gridTemplateColumns: "1fr 1fr",
-  gap: 2,
-  background: "var(--gray-2)",
-  marginBottom: 32,
-};
-
-const statCard = {
-  background: "var(--gray-1)",
-  padding: "28px 24px",
-};
-
-const statNum = {
-  fontFamily: "'Nunito', sans-serif",
-  fontSize: "2.6rem",
-  fontWeight: 900,
-  color: "var(--gold)",
-  lineHeight: 1,
-  marginBottom: 6,
-};
-
-const statLbl = {
-  fontSize: "0.75rem",
-  color: "var(--gray-4)",
-  letterSpacing: "0.08em",
-  textTransform: "uppercase",
-  fontWeight: 600,
-};
-
-const heroDivider = {
-  height: 1,
-  background: "var(--gray-2)",
-  marginBottom: 24,
-};
-
-const heroTag = {
-  display: "flex",
-  alignItems: "center",
-  gap: 10,
-  fontSize: "0.8rem",
-  color: "var(--gray-4)",
-  fontWeight: 500,
-};
-
-const heroTagDot = {
-  width: 8,
-  height: 8,
-  borderRadius: "50%",
-  background: "#4ade80",
-  flexShrink: 0,
-  boxShadow: "0 0 6px #4ade80",
-};

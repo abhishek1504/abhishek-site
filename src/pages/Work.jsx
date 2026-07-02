@@ -1,252 +1,130 @@
-const apps = [
-  {
-    name: "GajiGesa EWA App",
-    category: "Fintech · Earned Wage Access",
-    color: "#00B37E",
-    bgColor: "#00120B",
-    icon: "💸",
-    letter: "G",
-    platform: "iOS & Android",
-    users: "25,000+ MAU",
-    role: "Full-Stack Lead & Engineering Manager",
-    desc: "Earned Wage Access platform allowing workers to withdraw earned salary before payday. Built on a single React Native codebase serving both mobile and web.",
-    highlights: ["Apdex 0.1 → 0.7", "99.5% crash-free", "GCP + Firebase infra", "MoEngage engagement", "<1% code duplication"],
-    tech: ["React Native", "TypeScript", "GCP", "Firebase", "MongoDB", "MoEngage", "SonarQube", "Maestro"],
-  },
-  {
-    name: "GajiGesa Web",
-    category: "Fintech · Web Platform",
-    color: "#00B37E",
-    bgColor: "#00120B",
-    icon: "🌐",
-    letter: "G",
-    platform: "Web",
-    users: "25,000+ MAU",
-    role: "Lead Frontend Engineer",
-    desc: "Web counterpart to the mobile EWA app — same React Native codebase, unified design system, serving HR teams and employees on desktop browsers.",
-    highlights: ["Shared codebase with mobile", "React Native Web", "Performance optimized"],
-    tech: ["React Native Web", "TypeScript", "AWS", "Firebase Analytics", "Jest", "ESLint"],
-  },
-  {
-    name: "HR Dashboard",
-    category: "Fintech · Internal Tools",
-    color: "#7C3AED",
-    bgColor: "#0D0720",
-    icon: "📊",
-    letter: "HR",
-    platform: "Web",
-    users: "Enterprise clients",
-    role: "Lead Frontend Engineer",
-    desc: "Internal HR dashboard enabling companies to manage employee salary access, track usage, configure EWA policies and view payroll analytics in real time.",
-    highlights: ["Real-time analytics", "Payroll integration", "Multi-tenant"],
-    tech: ["React JS", "TypeScript", "MongoDB", "Firebase", "MoEngage", "Performance Monitoring"],
-  },
-  {
-    name: "KFC Mobile App",
-    category: "Food & Beverage · Consumer",
-    color: "#E4002B",
-    bgColor: "#1A0005",
-    icon: "🍗",
-    letter: "KFC",
-    platform: "iOS & Android",
-    users: "20,000+ MAU",
-    role: "Senior Frontend Developer",
-    desc: "KFC's mobile ordering and loyalty application — one of the world's most recognized fast food brands. Worked on feature development at Cognizant.",
-    highlights: ["20K+ monthly active users", "Mobile ordering", "Loyalty features"],
-    tech: ["React Native", "Mobile", "Performance"],
-  },
-  {
-    name: "TSC — Tractor Supply Co.",
-    category: "Retail · E-Commerce",
-    color: "#007DC5",
-    bgColor: "#000D1A",
-    icon: "🚜",
-    letter: "TSC",
-    platform: "Web & Mobile",
-    users: "Large-scale retail",
-    role: "Senior Frontend Developer",
-    desc: "Tractor Supply Company — one of America's largest rural lifestyle retailers with $14B+ in annual revenue. Contributed to the e-commerce frontend at Cognizant.",
-    highlights: ["Large-scale retail platform", "E-commerce flows", "Cross-device"],
-    tech: ["React", "JavaScript", "Responsive Design"],
-  },
-  {
-    name: "WWL Mobile App",
-    category: "Logistics · Shipping",
-    color: "#003087",
-    bgColor: "#00061A",
-    icon: "🚢",
-    letter: "WWL",
-    platform: "iOS & Android",
-    users: "Global logistics",
-    role: "Senior Frontend Developer",
-    desc: "Wallenius Wilhelmsen Logistics — global automotive and marine shipping leader. Developed new features that drove an 80% increase in app engagement.",
-    highlights: ["80% engagement increase", "New feature development", "Global logistics"],
-    tech: ["React Native", "Mobile", "Performance"],
-  },
+const brands = [
+  { letter: "G", color: "#0F766E", name: "Gajigesa (Kredivo Group)", category: "Fintech · Earned Wage Access", role: "AVP – Technical Product Manager", desc: "Consumer fintech platform serving 25,000+ monthly active users. I own product development, UX design, and performance — React/React Native front end, Node.js backend, AWS infrastructure.", highlights: ["99.5% crash-free users", "Apdex 0.9", "25K+ MAU"], tech: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "MongoDB", "Firebase"] },
+  { letter: "KFC", color: "#B3202C", name: "KFC Multi-Tenant App", category: "QSR · Consumer", role: "Senior Associate, Cognizant", desc: "Multi-tenant web and mobile application for multiple countries (India, Australia) — React web app, React Native mobile app, shared business logic via internal NPM libraries.", highlights: ["Multi-country tenancy", "Shared codebase"], tech: ["React", "React Native", "NPM Libraries"] },
+  { letter: "K", color: "#3B2F8F", name: "Kohl's Inventory App", category: "Retail · Enterprise", role: "Senior Associate, Cognizant", desc: "Native Android inventory management app for Zebra OEM enterprise devices, used by store employees to scan and manage inbound inventory.", highlights: ["Zebra OEM devices", "In-store operations"], tech: ["Kotlin", "Native Android"] },
+  { letter: "TSC", color: "#20609C", name: "Tractor Supply Co.", category: "Retail · E-commerce", role: "Senior Associate, Cognizant", desc: "Consumer shopping app for one of America's largest rural lifestyle retailers, maintained and enhanced in collaboration with Infosys.", highlights: ["Large-scale retail", "Partner delivery"], tech: ["React Native"] },
+  { letter: "WWL", color: "#1E3A66", name: "Wallenius Wilhelmsen", category: "Logistics · Shipping", role: "Senior Associate, Cognizant", desc: "Driver-facing delivery app for a global automotive logistics leader — VIN scanning, proof-of-delivery, digital signature capture. Feature development drove an 80% increase in app engagement.", highlights: ["80% engagement lift", "Solo delivery"], tech: ["Appcelerator Titanium"] },
+  { letter: "HUL", color: "#0B5AA5", name: "HUL Payroll Delivery", category: "HR Tech · Payroll", role: "Software Engineer, Ma Foi", desc: "Single-handedly managed payroll processing delivery across 80 units of Hindustan Unilever — engineering through client resolution, month on month.", highlights: ["80 business units", "End-to-end ownership"], tech: ["Delphi", "Firebird DB"] },
 ];
 
 const jobs = [
-  {
-    role: "AVP – Engineering",
-    company: "GajiGesa (Acquired by Kredivo Group)",
-    dates: "Oct 2022 – Present",
-    location: "Hyderabad, IN",
-    current: true,
+  { role: "Assistant Vice President – Technical Product Manager", company: "Gajigesa (acquired by Kredivo Group)", dates: "Oct 2022 – Present", current: true,
     bullets: [
-      "Owned the full product engineering stack end-to-end — React Native frontend, NestJS APIs, GCP cloud infrastructure, MongoDB database, and Firebase observability — for 3 products serving 25,000+ monthly active users.",
-      "Made the architectural decision to adopt React Native for both mobile and web, eliminating duplicate codebases and accelerating feature delivery across platforms.",
-      "Managed GCP and AWS cloud infrastructure — deployments, environment configuration, and CI/CD pipelines for production systems.",
-      "Instrumented Firebase Performance Monitoring and Analytics across mobile and web, enabling data-driven decisions on crash rates, render times, and user flows.",
-      "Integrated MoEngage for push notifications, in-app messaging, and user lifecycle campaigns — directly improving retention and re-engagement.",
-      "Built MongoDB data access layers and integrated NoSQL with Firebase Firestore for real-time features across the EWA platform.",
-      "Improved Apdex score from 0.1 to 0.7 by optimizing API calls, memoizing React components, and reducing render cycles.",
-      "Achieved 99.5%+ crash-free rate by migrating away from the deprecated NativeBase library and building an in-house component library.",
-      "Reduced code duplication to under 1% by introducing SonarQube into the CI pipeline and enforcing code quality standards.",
+      "Own the end-to-end product lifecycle — product development, UX design, and performance optimization — for a consumer fintech platform, reporting to the Head of Engineering.",
+      "Achieved and sustained 99.5% crash-free users and an Apdex score of 0.9 through performance optimization, monitoring, and release quality initiatives.",
+      "Drive delivery across a React / React Native front end and Node.js backend on AWS, with CI/CD pipelines on GitHub Actions.",
+      "Translate product strategy into technical roadmaps; align stakeholders across product, design, and engineering.",
     ],
-    tags: ["React Native", "React JS", "TypeScript", "GCP", "AWS", "Firebase", "MongoDB", "MoEngage", "SonarQube", "Fintech"],
-  },
-  {
-    role: "Head of Mobility",
-    company: "Integrum Solutions",
-    dates: "May 2022 – Sep 2022",
-    location: "Bengaluru, IN",
+    tags: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "Product Management", "Fintech"] },
+  { role: "Head of Mobility", company: "Integrum Solutions", dates: "May 2022 – Sep 2022",
     bullets: [
-      "Led mobile application development across 2 products end-to-end.",
-      "Reduced page load time by 30% across 10 client websites through performance audits and Web Vitals optimization.",
-      "Implemented responsive design for a client project that won a UX Award from the Lion Foundation.",
+      "Spearheaded the mobile development practice; delivered 2 production React Native apps in 4 months.",
+      "Managed vendor resourcing and external engineering partners for on-time, on-quality delivery.",
     ],
-    tags: ["React Native", "Web Vitals", "Performance", "Mobile"],
-  },
-  {
-    role: "Manager",
-    company: "Capgemini Technology Solutions",
-    dates: "Aug 2021 – May 2022",
-    location: "Bengaluru, IN",
+    tags: ["React Native", "Vendor Management", "Leadership"] },
+  { role: "Manager – Web Engineering", company: "Capgemini", dates: "Sep 2021 – May 2022",
     bullets: [
-      "Built a reusable UX component library for the web vertical, achieving 30% code reuse across multiple projects.",
-      "Collaborated with cross-functional teams to deliver web application projects for enterprise clients.",
+      "Designed and built a reusable React.js component library, standardizing UI development and accelerating build time across client web projects.",
     ],
-    tags: ["React JS", "Component Library", "UX", "Enterprise"],
-  },
-  {
-    role: "Senior Associate – Project",
-    company: "Cognizant Technology Solutions",
-    dates: "Feb 2016 – Aug 2021",
-    location: "Hyderabad, IN",
+    tags: ["React", "Component Library", "Enterprise"] },
+  { role: "Senior Associate – Projects", company: "Cognizant Technology Solutions", dates: "Feb 2016 – Aug 2021",
     bullets: [
-      "Led frontend development across healthcare, logistics, and e-commerce domains.",
-      "Worked on the KFC Mobile app serving 20,000+ monthly active users.",
-      "Increased app engagement by 80% by developing new features for the WWL (Wallenius Wilhelmsen) mobile app.",
-      "Worked on TSC (Tractor Supply Company), a large-scale e-commerce platform.",
+      "KFC: multi-tenant web + mobile app for India and Australia — React, React Native, shared NPM libraries.",
+      "Kohl's: Kotlin native Android inventory app for Zebra OEM enterprise devices.",
+      "Tractor Supply Co.: React Native consumer shopping app, in collaboration with Infosys.",
+      "Wallenius Wilhelmsen: single-handedly built a driver delivery app — VIN scanning, proof-of-delivery, e-signatures.",
     ],
-    tags: ["React Native", "Mobile", "Healthcare", "E-Commerce", "Logistics"],
-  },
-  {
-    role: "Senior Software Engineer",
-    company: "Accrete Solutions LLC",
-    dates: "Feb 2013 – Feb 2016",
-    location: "Gurgaon, IN",
+    tags: ["React Native", "Kotlin", "React", "Retail", "Logistics", "QSR"] },
+  { role: "Senior Software Engineer", company: "Accrete Solutions LLC · Gurugram", dates: "2013 – 2016",
     bullets: [
-      "Migrated iOS projects from Objective-C and Swift to Appcelerator Titanium for a unified cross-platform codebase.",
-      "Upskilled 10 engineers through structured daily training on Appcelerator Titanium.",
+      "Migrated an enterprise field-service iPad app from Objective-C to Appcelerator Titanium for a cross-platform codebase.",
+      "Built B2B customer-data synchronization services with third-party platforms using Ruby on Rails.",
     ],
-    tags: ["Appcelerator Titanium", "iOS", "Cross-Platform", "Training"],
-  },
+    tags: ["Objective-C", "Titanium", "Ruby on Rails"] },
+  { role: "Senior Software Engineer", company: "OTS Solutions · Gurugram", dates: "2011 – 2012",
+    bullets: [
+      "Developed iPhone apps on Delphi Prism and laid the foundation of the company's mobility team.",
+      "Led a team of engineers to adopt Appcelerator Titanium with ASP.NET backends.",
+    ],
+    tags: ["iOS", "Titanium", "ASP.NET", "Team Building"] },
+  { role: "Software Engineer – Delivery", company: "Ma Foi Consulting", dates: "2010 – 2011",
+    bullets: [
+      "Owned the payroll product from engineering through client delivery; single-handedly managed 80 units of Hindustan Unilever.",
+    ],
+    tags: ["Payroll", "Client Delivery"] },
+  { role: "Software Programmer", company: "Topsys Solutions · Bengaluru", dates: "2008 – 2010",
+    bullets: [
+      "Developed and maintained the core salary-processing engine of a desktop payroll product (Delphi 5.0, Firebird DB) used by ING Vysya Bank, Kamat Yatri Nivas, and other enterprise clients.",
+    ],
+    tags: ["Delphi", "Firebird DB"] },
+];
+
+const education = [
+  { degree: "PGCP, Generative AI & Agentic AI", school: "IIT Roorkee · with Futurense", year: "2025 – 2026" },
+  { degree: "Master of Computer Applications", school: "H.N.B. Garhwal University · IMS Dehradun", year: "2005 – 2008" },
+  { degree: "B.Sc. (Hons) Mathematics", school: "University of Delhi", year: "2002 – 2005" },
 ];
 
 export default function Work() {
   return (
     <div className="page fade-in">
-      <div className="section">
-        <div className="section-label">Apps & products I've built</div>
-        <h1 className="section-title">MY<br /><span>WORK</span></h1>
+      <section className="section" style={{ borderTop: "none" }}>
+        <div className="wrap">
+          <div className="mono eyebrow">2008 – Present</div>
+          <h1 className="section-title">Experience</h1>
+          <p className="lede" style={{ marginBottom: 56 }}>
+            Seventeen years across fintech, e-commerce, retail, logistics, QSR, and
+            HR tech — from writing payroll engines to leading product and engineering.
+          </p>
 
-        <p style={{ fontSize: 16, color: "var(--gray-4)", lineHeight: 1.8, maxWidth: 600, marginBottom: 64 }}>
-          13 years as a full-stack and forward deployed engineer — from global consumer
-          brands like KFC and Tractor Supply to building a fintech platform end-to-end.
-          I own the whole problem: React Native frontends, NestJS APIs, GCP and AWS
-          infrastructure, MongoDB and Firebase data layers, MoEngage engagement pipelines.
-        </p>
-
-        {/* App showcase grid */}
-        <div className="section-label" style={{ marginBottom: 24 }}>Product showcase</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2, background: "var(--gray-1)", marginBottom: 80 }}>
-          {apps.map((app) => (
-            <div key={app.name} style={{ background: "var(--black)", padding: "32px 28px", display: "flex", flexDirection: "column", gap: 0, transition: "background 0.2s" }}
-              onMouseEnter={e => e.currentTarget.style.background = "#111"}
-              onMouseLeave={e => e.currentTarget.style.background = "#0A0A0A"}
-            >
-              {/* App icon */}
-              <div style={{ width: 56, height: 56, borderRadius: 14, background: app.bgColor, border: `1px solid ${app.color}22`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                <span style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 800, fontSize: app.letter.length > 2 ? 13 : 18, color: app.color, letterSpacing: 1 }}>{app.letter}</span>
-              </div>
-
-              {/* Meta */}
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "var(--gray-4)", letterSpacing: 2, marginBottom: 8, textTransform: "uppercase" }}>{app.category}</div>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "var(--white)", marginBottom: 4 }}>{app.name}</div>
-              <div style={{ fontSize: 12, color: "var(--gray-4)", marginBottom: 16 }}>{app.platform} · {app.users}</div>
-
-              <p style={{ fontSize: 14, color: "var(--gray-4)", lineHeight: 1.7, marginBottom: 20, flex: 1 }}>{app.desc}</p>
-
-              {/* Highlights */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
-                {app.highlights.map(h => (
-                  <span key={h} style={{ fontSize: 11, padding: "3px 10px", background: `${app.color}15`, color: app.color, borderRadius: 2, fontFamily: "'JetBrains Mono', monospace" }}>{h}</span>
-                ))}
-              </div>
-
-              {/* Tech stack */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                {app.tech.map(t => (
-                  <span key={t} style={{ fontSize: 11, padding: "3px 8px", background: "var(--gray-1)", color: "var(--gray-4)", fontFamily: "'JetBrains Mono', monospace" }}>{t}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Career Timeline */}
-        <div className="section-label" style={{ marginBottom: 32 }}>Career timeline</div>
-        <div className="timeline">
-          {jobs.map((job) => (
-            <div key={job.role + job.company} className={`timeline-item${job.current ? " current" : ""}`}>
-              <div className="timeline-dates">{job.dates} · {job.location}</div>
-              <div className="timeline-role">{job.role}</div>
-              <div className="timeline-company">{job.company}</div>
-              <ul className="timeline-bullets">
-                {job.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
-              <div className="skill-tags" style={{ marginTop: 16 }}>
-                {job.tags.map(t => <span key={t} className="skill-tag">{t}</span>)}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Education */}
-        <div style={{ marginTop: 80, paddingTop: 80, borderTop: "1px solid var(--gray-2)" }}>
-          <div className="section-label" style={{ marginBottom: 24 }}>Education</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-            {[
-              { degree: "Masters in Computer Applications", school: "HNB Garhwal University · IMS Dehradun", year: "2005 – 2008" },
-              { degree: "B.Sc. Mathematics", school: "Delhi University", year: "2002 – 2005" },
-            ].map(({ degree, school, year }) => (
-              <div key={degree} style={{ padding: "28px 24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 10 }}>{year}</div>
-                <div style={{ fontSize: 17, fontWeight: 600, color: "var(--white)", marginBottom: 4 }}>{degree}</div>
-                <div style={{ fontSize: 14, color: "var(--gray-4)" }}>{school}</div>
+          <div className="mono eyebrow">Products & brands</div>
+          <div className="grid-3" style={{ marginBottom: 80, marginTop: 20 }}>
+            {brands.map((b) => (
+              <div className="card" key={b.name} style={{ display: "flex", flexDirection: "column" }}>
+                <div className="display" style={{ width: 52, height: 52, borderRadius: 8, background: `${b.color}12`, border: `1px solid ${b.color}30`, color: b.color, fontWeight: 800, fontSize: b.letter.length > 2 ? 13 : 18, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>{b.letter}</div>
+                <div className="mono" style={{ color: "var(--slate)", marginBottom: 8 }}>{b.category}</div>
+                <h3 className="display" style={{ fontWeight: 800, fontSize: "1.1rem", marginBottom: 2 }}>{b.name}</h3>
+                <div style={{ fontSize: 13, color: "var(--slate)", fontStyle: "italic", marginBottom: 14 }}>{b.role}</div>
+                <p style={{ fontSize: 14.5, color: "var(--slate)", flex: 1, marginBottom: 16 }}>{b.desc}</p>
+                <div style={{ marginBottom: 8 }}>
+                  {b.highlights.map((h) => <span className="tag tag-accent" key={h}>{h}</span>)}
+                </div>
+                <div>{b.tech.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 24, padding: "24px", border: "1px solid #C9A84C22", background: "var(--gray-1)", maxWidth: 480 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 8 }}>CERTIFICATION</div>
-            <div style={{ fontSize: 16, fontWeight: 600, color: "var(--white)", marginBottom: 4 }}>GenAI & Agentic AI</div>
-            <div style={{ fontSize: 14, color: "var(--gray-4)" }}>IIT Roorkee & Futurense</div>
+
+          <div className="mono eyebrow" style={{ marginBottom: 24 }}>Career timeline</div>
+          <div className="timeline">
+            {jobs.map((job) => (
+              <div key={job.role + job.company} className={`timeline-item${job.current ? " current" : ""}`}>
+                <div className="timeline-dates">{job.dates}</div>
+                <div className="timeline-role">{job.role}</div>
+                <div className="timeline-company">{job.company}</div>
+                <ul className="timeline-bullets">
+                  {job.bullets.map((b) => <li key={b}>{b}</li>)}
+                </ul>
+                <div style={{ marginTop: 14 }}>
+                  {job.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 72, paddingTop: 56, borderTop: "1px solid var(--line)" }}>
+            <div className="mono eyebrow" style={{ marginBottom: 20 }}>Education</div>
+            <div className="grid-3">
+              {education.map(({ degree, school, year }) => (
+                <div className="card" key={degree}>
+                  <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>{year}</div>
+                  <div className="display" style={{ fontWeight: 800, fontSize: "1.05rem", marginBottom: 4 }}>{degree}</div>
+                  <div style={{ fontSize: 14, color: "var(--slate)" }}>{school}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

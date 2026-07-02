@@ -1,6 +1,6 @@
 # abhisheksharma.dev
 
-Personal portfolio site for Abhishek Sharma — Frontend Engineering Manager, Chess Player, Runner.
+Personal portfolio site for Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader.
 
 Built with React. Deployable to GitHub Pages or Netlify.
 

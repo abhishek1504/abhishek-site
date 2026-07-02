@@ -1,87 +1,33 @@
 export default function Contact() {
   return (
     <div className="page fade-in">
-      <div className="section">
-        <div className="section-label">Let's talk</div>
-        <h1 className="section-title">GET IN<br /><span>TOUCH</span></h1>
-
-        <div className="contact-layout">
-          <div>
-            <p className="contact-intro">
-              I'm open to <strong>Full-Stack Engineer, Forward Deployed Engineer, and Engineering Manager roles</strong> —
-              fintech, consumer, or platform engineering. I own the full stack:
-              React Native to NestJS, GCP to MongoDB, Firebase to MoEngage.
-              Reach out — I respond to real messages from real people.
-            </p>
-
-            <div className="contact-links">
-              <a href="mailto:abhisheksharma.dsc@gmail.com" className="contact-link">
-                <div className="contact-link-icon">✉️</div>
-                <div className="contact-link-text">
-                  <div className="contact-link-label">Email</div>
-                  <div className="contact-link-value">abhisheksharma.dsc@gmail.com</div>
-                </div>
-                <div className="contact-link-arrow">→</div>
-              </a>
-              <a href="https://abhishek1504.netlify.app" target="_blank" rel="noopener noreferrer" className="contact-link">
-                <div className="contact-link-icon">🌐</div>
-                <div className="contact-link-text">
-                  <div className="contact-link-label">Website</div>
-                  <div className="contact-link-value">abhishek1504.netlify.app</div>
-                </div>
-                <div className="contact-link-arrow">→</div>
-              </a>
-              <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" className="contact-link">
-                <div className="contact-link-icon">💼</div>
-                <div className="contact-link-text">
-                  <div className="contact-link-label">LinkedIn</div>
-                  <div className="contact-link-value">linkedin.com/in/abhishekmca</div>
-                </div>
-                <div className="contact-link-arrow">→</div>
-              </a>
-            </div>
+      <section className="section" style={{ borderTop: "none" }}>
+        <div className="wrap">
+          <div className="mono eyebrow">Let's talk</div>
+          <h1 className="section-title">Open to senior<br />leadership roles.</h1>
+          <p className="lede" style={{ marginBottom: 48 }}>
+            Engineering Manager · AVP Engineering · Technical Product Manager ·
+            AI Engineering Leadership — in Hyderabad or remote.
+          </p>
+          <div className="grid-3">
+            <a href="mailto:abhisheksharma.dsc@gmail.com" className="card" style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>Email</div>
+              <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>abhisheksharma.dsc@gmail.com</div>
+            </a>
+            <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>LinkedIn</div>
+              <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>linkedin.com/in/abhishekmca</div>
+            </a>
+            <a href="https://github.com/abhishek1504" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>GitHub</div>
+              <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>github.com/abhishek1504</div>
+            </a>
           </div>
-
-          <div>
-            <div className="contact-social">
-              <div className="contact-social-title">Find me elsewhere</div>
-              <div className="social-grid">
-                {[
-                  { icon: "🐙", label: "GitHub", url: "https://github.com/abhishek1504", handle: "@abhishek1504" },
-                  { icon: "♟", label: "Chess.com", url: "https://chess.com", handle: "My Chess Profile" },
-                  { icon: "📸", label: "Instagram", url: "https://instagram.com", handle: "@thinkingathlete" },
-                  { icon: "▶️", label: "YouTube", url: "https://youtube.com", handle: "The Thinking Athlete" },
-                ].map(({ icon, label, url, handle }) => (
-                  <a key={label} href={url} target="_blank" rel="noopener noreferrer" className="social-link">
-                    <span style={{ fontSize: 18 }}>{icon}</span>
-                    <div>
-                      <div style={{ fontSize: 12, color: "var(--gray-4)", marginBottom: 2 }}>{label}</div>
-                      <div style={{ fontSize: 13 }}>{handle}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div style={{ marginTop: 40, padding: "24px", border: "1px solid var(--gray-2)", background: "var(--gray-1)" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--gold)", letterSpacing: 2, marginBottom: 12 }}>CURRENTLY OPEN TO</div>
-              {[
-                "Full-Stack Engineer roles",
-                "Forward Deployed Engineer roles",
-                "Engineering Manager / Staff Engineer positions",
-                "Fintech, consumer & platform companies",
-                "Full-stack · Cloud · Mobile · Data",
-                "Bengaluru · Hyderabad · Remote",
-              ].map(item => (
-                <div key={item} style={{ fontSize: 14, color: "var(--gray-4)", paddingLeft: 16, position: "relative", marginBottom: 8, lineHeight: 1.6 }}>
-                  <span style={{ position: "absolute", left: 0, color: "var(--gold)" }}>→</span>
-                  {item}
-                </div>
-              ))}
-            </div>
+          <div style={{ marginTop: 28 }}>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary">Download my resume (PDF)</a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
