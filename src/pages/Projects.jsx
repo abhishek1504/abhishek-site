@@ -14,6 +14,15 @@ const decisions = [
 
 const stack = ["Python", "Anthropic Claude API", "YouTube Data API v3", "OAuth 2.0", "FFmpeg", "imageio", "Pillow", "GitHub Actions", "REST APIs", "Cron Scheduling"];
 
+const otherProjects = [
+  {
+    name: "LangChain & LangGraph Demos",
+    desc: "Hands-on demos prototyping core agentic AI patterns \u2014 prompt-chained LLM calls with LangChain, and stateful, graph-based orchestration with LangGraph. Models a multi-step recruiting workflow as a LangGraph StateGraph: nodes categorize candidate experience and assess skill match, with conditional edges routing to interview, escalation, or rejection based on graph state.",
+    tags: ["LangChain", "LangGraph", "OpenAI", "Python", "Agentic AI", "State Graphs"],
+    link: "https://github.com/abhishek1504/langchain_langraph_demo",
+  },
+];
+
 export default function Projects() {
   return (
     <div className="page fade-in">
@@ -52,6 +61,18 @@ export default function Projects() {
 
           <div className="mono eyebrow" style={{ marginBottom: 16 }}>Stack</div>
           <div>{stack.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
+
+          <div className="mono eyebrow" style={{ marginBottom: 20, marginTop: 64 }}>Other projects</div>
+          <div className="grid-2">
+            {otherProjects.map((p) => (
+              <div className="card" key={p.name}>
+                <h3 className="display" style={{ fontWeight: 800, fontSize: "1.05rem", marginBottom: 10 }}>{p.name}</h3>
+                <p style={{ fontSize: 14.5, color: "var(--slate)", marginBottom: 16 }}>{p.desc}</p>
+                <div style={{ marginBottom: 16 }}>{p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
+                <a href={p.link} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: 13, padding: "8px 16px" }}>View on GitHub</a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
