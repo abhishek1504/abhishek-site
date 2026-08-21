@@ -1,9 +1,10 @@
 {
   "short_name": "Abhishek Sharma",
-  "name": "Abhishek Sharma — Full-Stack & Forward Deployed Engineer",
-  "description": "Full-Stack and Forward Deployed Engineer. React Native, GCP, AWS, MongoDB, Firebase, MoEngage. Hyderabad, India.",
+  "name": "Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader",
+  "description": "AVP Engineering at Gajigesa (Kredivo Group). React, React Native, Kotlin, Node.js, AWS, LangChain/LangGraph, Generative & Agentic AI. Hyderabad, India.",
+  "icons": [{ "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" }],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0d0d0f",
-  "background_color": "#0d0d0f"
+  "theme_color": "#0d9488",
+  "background_color": "#0a0e17"
 }

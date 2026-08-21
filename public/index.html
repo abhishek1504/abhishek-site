@@ -4,10 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- ── Theme (no-flash): apply saved/system theme before first paint ── -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme = stored === "light" || stored === "dark"
+          ? stored
+          : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
   <!-- ── Primary SEO ── -->
-  <title>Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader | Hyderabad</title>
-  <meta name="description" content="Abhishek Sharma is an engineering and product leader with 17+ years of experience — AVP and Technical Product Manager at Gajigesa (Kredivo Group). React Native, React, Node.js, AWS, Generative AI & Agentic AI (IIT Roorkee). Based in Hyderabad, India." />
-  <meta name="keywords" content="technical product manager Hyderabad, engineering manager Hyderabad, AVP engineering India, React Native leader India, generative AI engineer Hyderabad, agentic AI India, fintech product manager India, Abhishek Sharma" />
+  <title>Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader | Hyderabad</title>
+  <meta name="description" content="Abhishek Sharma is an engineering leader with 17+ years of experience — AVP Engineering at Gajigesa (Kredivo Group). React, React Native, Node.js, Kotlin, AWS, LangChain/LangGraph, Generative & Agentic AI (IIT Roorkee). Based in Hyderabad, India." />
+  <meta name="keywords" content="AVP engineering Hyderabad, engineering manager Hyderabad, full stack engineering leader India, AI engineer Hyderabad, React Native leader India, generative AI engineer Hyderabad, agentic AI India, fintech engineering leader India, Abhishek Sharma" />
   <meta name="author" content="Abhishek Sharma" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://abhisheksharma.dev" />
@@ -15,12 +30,12 @@
   <!-- ── Fonts ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- ── Open Graph ── -->
   <meta property="og:type"        content="profile" />
-  <meta property="og:title"       content="Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader" />
-  <meta property="og:description" content="17+ years shipping mobile and web products across fintech, retail, logistics, and QSR. Gen AI & Agentic AI (IIT Roorkee). Hyderabad, India." />
+  <meta property="og:title"       content="Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader" />
+  <meta property="og:description" content="17+ years shipping mobile and web products across fintech, retail, logistics, and QSR. Now building agentic AI systems. Gen AI & Agentic AI (IIT Roorkee). Hyderabad, India." />
   <meta property="og:url"         content="https://abhisheksharma.dev" />
   <meta property="og:locale"      content="en_IN" />
   <meta property="profile:first_name" content="Abhishek" />
@@ -28,8 +43,8 @@
 
   <!-- ── Twitter / X Card ── -->
   <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader" />
-  <meta name="twitter:description" content="17+ years shipping products. React Native · React · Node.js · AWS · Gen AI. Hyderabad, India." />
+  <meta name="twitter:title"       content="Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader" />
+  <meta name="twitter:description" content="17+ years shipping products. React · React Native · Node.js · Kotlin · AWS · Gen AI. Hyderabad, India." />
 
   <!-- ── Structured Data (JSON-LD) ── -->
   <script type="application/ld+json">
@@ -37,10 +52,11 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Abhishek Sharma",
-    "jobTitle": "Assistant Vice President — Technical Product Manager",
-    "description": "Engineering and product leader with 17+ years of experience building and shipping mobile and web products across fintech, e-commerce, retail, logistics, and QSR. AVP at Gajigesa (Kredivo Group). PGCP in Generative AI & Agentic AI from IIT Roorkee.",
+    "jobTitle": "Assistant Vice President — Engineering",
+    "description": "Engineering leader with 17+ years of experience building and shipping mobile and web products across fintech, e-commerce, retail, logistics, and QSR. AVP Engineering at Gajigesa (Kredivo Group). PGCP in Generative AI & Agentic AI from IIT Roorkee.",
     "url": "https://abhisheksharma.dev",
     "email": "abhisheksharma.dsc@gmail.com",
+    "telephone": "+91-9811283725",
     "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "IIT Roorkee" },
@@ -49,9 +65,9 @@
     ],
     "worksFor": { "@type": "Organization", "name": "Gajigesa (Kredivo Group)", "url": "https://kredivo.com" },
     "knowsAbout": [
-      "Technical Product Management", "Engineering Management", "React Native", "React",
-      "Node.js", "TypeScript", "Kotlin", "Amazon Web Services", "CI/CD", "GitHub Actions",
-      "Generative AI", "Agentic AI", "Anthropic Claude", "LLM Integration",
+      "Engineering Management", "Full-Stack Engineering", "React Native", "React",
+      "Node.js", "TypeScript", "Kotlin", "Android", "Amazon Web Services", "CI/CD", "GitHub Actions",
+      "Generative AI", "Agentic AI", "LangChain", "LangGraph", "Anthropic Claude", "LLM Integration",
       "UX Design", "Fintech", "Mobile App Development", "Performance Optimization"
     ],
     "hasCredential": [
@@ -67,15 +83,16 @@
   }
   </script>
 
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta name="theme-color" content="#0d9488" />
 </head>
 <body>
   <noscript>
-    <div style="font-family:Georgia,serif;max-width:800px;margin:40px auto;padding:20px;color:#16294a">
-      <h1>Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader</h1>
-      <p>Engineering and product leader with 17+ years of experience across fintech, e-commerce, retail, logistics, and QSR. AVP at Gajigesa (Kredivo Group), Hyderabad, India.</p>
-      <p><strong>Skills:</strong> Technical Product Management · React Native · React · Node.js · AWS · GitHub Actions · Generative AI · Agentic AI</p>
+    <div style="font-family:Georgia,serif;max-width:800px;margin:40px auto;padding:20px;color:#0b1220">
+      <h1>Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader</h1>
+      <p>Engineering leader with 17+ years of experience across fintech, e-commerce, retail, logistics, and QSR. AVP Engineering at Gajigesa (Kredivo Group), Hyderabad, India.</p>
+      <p><strong>Skills:</strong> Full-Stack Engineering · React Native · React · Node.js · Kotlin · AWS · GitHub Actions · Generative AI · Agentic AI</p>
       <p><strong>Email:</strong> abhisheksharma.dsc@gmail.com · <strong>LinkedIn:</strong> linkedin.com/in/abhishekmca</p>
     </div>
   </noscript>

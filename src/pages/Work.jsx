@@ -1,21 +1,21 @@
 const brands = [
-  { letter: "G", color: "#0F766E", name: "Gajigesa (Kredivo Group)", category: "Fintech · Earned Wage Access", role: "AVP – Technical Product Manager", desc: "Consumer fintech platform serving 25,000+ monthly active users. I own product development, UX design, and performance — React/React Native front end, Node.js backend, AWS infrastructure.", highlights: ["99.5% crash-free users", "Apdex 0.9", "25K+ MAU"], tech: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "MongoDB", "Firebase"] },
+  { letter: "G", color: "#0F766E", name: "Gajigesa (Kredivo Group)", category: "Fintech · Earned Wage Access", role: "AVP – Engineering", desc: "Consumer fintech platform serving 25,000+ monthly active users. I own product development, UX design, and performance — React/React Native front end, Node.js backend, AWS infrastructure.", highlights: ["99.5% crash-free users", "Apdex 0.9", "25K+ MAU"], tech: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "MongoDB", "Firebase"] },
   { letter: "KFC", color: "#B3202C", name: "KFC Multi-Tenant App", category: "QSR · Consumer", role: "Senior Associate, Cognizant", desc: "Multi-tenant web and mobile application for multiple countries (India, Australia) — React web app, React Native mobile app, shared business logic via internal NPM libraries.", highlights: ["Multi-country tenancy", "Shared codebase"], tech: ["React", "React Native", "NPM Libraries"] },
   { letter: "K", color: "#3B2F8F", name: "Kohl's Inventory App", category: "Retail · Enterprise", role: "Senior Associate, Cognizant", desc: "Native Android inventory management app for Zebra OEM enterprise devices, used by store employees to scan and manage inbound inventory.", highlights: ["Zebra OEM devices", "In-store operations"], tech: ["Kotlin", "Native Android"] },
   { letter: "TSC", color: "#20609C", name: "Tractor Supply Co.", category: "Retail · E-commerce", role: "Senior Associate, Cognizant", desc: "Consumer shopping app for one of America's largest rural lifestyle retailers, maintained and enhanced in collaboration with Infosys.", highlights: ["Large-scale retail", "Partner delivery"], tech: ["React Native"] },
   { letter: "WWL", color: "#1E3A66", name: "Wallenius Wilhelmsen", category: "Logistics · Shipping", role: "Senior Associate, Cognizant", desc: "Driver-facing delivery app for a global automotive logistics leader — VIN scanning, proof-of-delivery, digital signature capture. Feature development drove an 80% increase in app engagement.", highlights: ["80% engagement lift", "Solo delivery"], tech: ["Appcelerator Titanium"] },
-  { letter: "HUL", color: "#0B5AA5", name: "HUL Payroll Delivery", category: "HR Tech · Payroll", role: "Software Engineer, Ma Foi", desc: "Single-handedly managed payroll processing delivery across 80 units of Hindustan Unilever — engineering through client resolution, month on month.", highlights: ["80 business units", "End-to-end ownership"], tech: ["Delphi", "Firebird DB"] },
+  { letter: "P21", color: "#0B5AA5", name: "Payroll21", category: "HR Tech · Payroll", role: "Software Engineer, Ma Foi", desc: "Payroll processing product single-handedly managed across 80 units of Hindustan Unilever — engineering through client resolution, month on month.", highlights: ["80 business units", "End-to-end ownership"], tech: ["Delphi", "Firebird DB"] },
 ];
 
 const jobs = [
-  { role: "Assistant Vice President – Technical Product Manager", company: "Gajigesa (acquired by Kredivo Group)", dates: "Oct 2022 – Present", current: true,
+  { role: "Assistant Vice President – Engineering", company: "Gajigesa (acquired by Kredivo Group)", dates: "Oct 2022 – Present", current: true,
     bullets: [
-      "Own the end-to-end product lifecycle — product development, UX design, and performance optimization — for a consumer fintech platform, reporting to the Head of Engineering.",
+      "Own the end-to-end product lifecycle — engineering delivery, UX design, and performance optimization — for a consumer fintech platform, reporting to the Head of Engineering.",
       "Achieved and sustained 99.5% crash-free users and an Apdex score of 0.9 through performance optimization, monitoring, and release quality initiatives.",
       "Drive delivery across a React / React Native front end and Node.js backend on AWS, with CI/CD pipelines on GitHub Actions.",
       "Translate product strategy into technical roadmaps; align stakeholders across product, design, and engineering.",
     ],
-    tags: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "Product Management", "Fintech"] },
+    tags: ["React Native", "React", "Node.js", "AWS", "GitHub Actions", "Engineering Management", "Fintech"] },
   { role: "Head of Mobility", company: "Integrum Solutions", dates: "May 2022 – Sep 2022",
     bullets: [
       "Spearheaded the mobile development practice; delivered 2 production React Native apps in 4 months.",
@@ -49,9 +49,9 @@ const jobs = [
     tags: ["iOS", "Titanium", "ASP.NET", "Team Building"] },
   { role: "Software Engineer – Delivery", company: "Ma Foi Consulting", dates: "2010 – 2011",
     bullets: [
-      "Owned the payroll product from engineering through client delivery; single-handedly managed 80 units of Hindustan Unilever.",
+      "Owned Payroll21 from engineering through client delivery; single-handedly managed 80 units of Hindustan Unilever.",
     ],
-    tags: ["Payroll", "Client Delivery"] },
+    tags: ["Payroll21", "Client Delivery"] },
   { role: "Software Programmer", company: "Topsys Solutions · Bengaluru", dates: "2008 – 2010",
     bullets: [
       "Developed and maintained the core salary-processing engine of a desktop payroll product (Delphi 5.0, Firebird DB) used by ING Vysya Bank, Kamat Yatri Nivas, and other enterprise clients.",
@@ -116,7 +116,7 @@ export default function Work() {
             <div className="grid-3">
               {education.map(({ degree, school, year }) => (
                 <div className="card" key={degree}>
-                  <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>{year}</div>
+                  <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>{year}</div>
                   <div className="display" style={{ fontWeight: 800, fontSize: "1.05rem", marginBottom: 4 }}>{degree}</div>
                   <div style={{ fontSize: 14, color: "var(--slate)" }}>{school}</div>
                 </div>
