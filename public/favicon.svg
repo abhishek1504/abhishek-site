@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d9488"/>
-      <stop offset="100%" stop-color="#4f46e5"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#0b1220"/>
-  <rect width="64" height="64" rx="14" fill="url(#g)" fill-opacity="0.18"/>
-  <text x="32" y="43" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="26" font-weight="600" fill="url(#g)" text-anchor="middle">AS</text>
+  <rect width="64" height="64" rx="14" fill="#181A16"/>
+  <text x="32" y="42" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="#FAF8F3" text-anchor="middle">AS</text>
+  <rect x="18" y="47" width="28" height="3" rx="1.5" fill="#2F5233"/>
 </svg>

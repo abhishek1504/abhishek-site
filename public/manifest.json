@@ -1,10 +1,15 @@
 {
   "short_name": "Abhishek Sharma",
-  "name": "Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader",
-  "description": "AVP Engineering at Gajigesa (Kredivo Group). React, React Native, Kotlin, Node.js, AWS, LangChain/LangGraph, Generative & Agentic AI. Hyderabad, India.",
-  "icons": [{ "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" }],
+  "name": "Abhishek Sharma — Forward Deployed Engineer, Full-Stack Engineer & Engineering Manager",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0d9488",
-  "background_color": "#0a0e17"
+  "theme_color": "#FAF8F3",
+  "background_color": "#FAF8F3"
 }

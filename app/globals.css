@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "ss01" 1, "cv11" 1;
+  }
+
+  ::selection {
+    @apply bg-accent-soft text-accent;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-6 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-accent;
+  }
+
+  .card {
+    @apply rounded-xl border border-line bg-white/60 p-7 shadow-[0_1px_2px_rgba(24,26,22,0.04)] transition-colors;
+  }
+
+  .tag {
+    @apply mr-2 mb-2 inline-block rounded-full border border-line bg-paper-alt px-3 py-1 font-mono text-[11px] tracking-wide text-slate;
+  }
+
+  .tag-accent {
+    @apply border-accent-soft bg-accent-soft text-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper transition-transform hover:-translate-y-0.5 hover:bg-accent;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent;
+  }
+
+  .section {
+    @apply border-t border-line py-20 sm:py-28;
+  }
+}
+
+/* Subtle paper grain texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}

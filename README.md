@@ -1,57 +1,61 @@
 # abhisheksharma.dev
 
-Personal portfolio site for Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader.
+Personal portfolio for Abhishek Sharma — Forward Deployed Engineer · Full-Stack
+Engineer · Engineering Manager.
 
-Built with React. Deployable to GitHub Pages or Netlify.
+Built with Next.js (App Router, static export) and Tailwind CSS. Deploys to
+Netlify as a fully static site — no server, no functions.
 
 ## Local Development
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-## Deploy to Netlify (Recommended — easiest)
+## Build
 
-1. Push this folder to a GitHub repo
-2. Go to [netlify.com](https://netlify.com) → "Add new site" → "Import an existing project"
-3. Connect your GitHub repo
-4. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `build`
-5. Click Deploy — done. Netlify auto-deploys on every push.
-
-To use your custom domain `abhisheksharma.dev`:
-- In Netlify: Site Settings → Domain Management → Add custom domain
-- In GoDaddy: Add a CNAME record pointing to your Netlify URL
-
-## Deploy to GitHub Pages
-
-1. In `package.json`, confirm `"homepage": "https://abhisheksharma.dev"`
-2. Run:
 ```bash
-npm install
-npm run deploy
+npm run build
 ```
-3. This runs `gh-pages -d build` — pushes the build to a `gh-pages` branch
-4. In GitHub repo Settings → Pages → set source to `gh-pages` branch
 
-For custom domain on GitHub Pages:
-- Add a `CNAME` file in `/public` containing: `abhisheksharma.dev`
-- In GoDaddy DNS: add A records pointing to GitHub Pages IPs
+This produces a static site in `out/` (via `output: "export"` in
+`next.config.js`). Preview it locally with:
 
-## Updating Your Content
+```bash
+npx serve out
+```
 
-All content is in `src/pages/`. Each page is a single file:
-- `Home.jsx` — landing page (hero, stats, pillars, featured project)
-- `Work.jsx` — brands/products grid, career timeline, education (update this when jobs change)
-- `Projects.jsx` — featured project deep-dive + other projects
-- `Certifications.jsx` — certifications list
-- `Contact.jsx` — email, phone, LinkedIn, GitHub, resume link
+## Deploy to Netlify
 
-## Design Tokens & Theme
+Already configured via `netlify.toml`:
 
-Colors, spacing, and type are defined in `src/styles.css` under `:root` (light theme) and
-`[data-theme="dark"]` (dark theme). Change `--accent` / `--accent2` to adjust the accent
-colors across the whole site. The theme toggle lives in `src/components/ThemeToggle.jsx`
-and persists the visitor's choice to `localStorage`.
+- Build command: `npm run build`
+- Publish directory: `out`
+
+Netlify auto-deploys on every push to `main`. Custom domain
+`abhisheksharma.dev` is configured in Netlify's Domain Management.
+
+## Updating Content
+
+All copy — hero, positioning pillars, job history, brands/products,
+featured project, certifications, and contact links — lives in a single
+file: `lib/content.js`. Edit the data there; the page components in
+`components/` render from it automatically. No other file needs to change
+for a content update.
+
+## Design Tokens
+
+Colors, spacing, and type scale live in `tailwind.config.js` (theme colors:
+`paper`, `ink`, `slate`, `accent`, `line`) and `app/globals.css` (shared
+component classes like `.card`, `.tag`, `.btn-primary`). Fonts are system
+font stacks (no external font requests), defined as `font-display`
+(serif), `font-sans`, and `font-mono` in the Tailwind config.
+
+## SEO
+
+- Per-page metadata, Open Graph, and Twitter Card tags: `app/layout.js`
+- JSON-LD structured data (Person, WebSite, ProfilePage): `app/layout.js`
+- `app/sitemap.js` and `app/robots.js` generate `sitemap.xml` and
+  `robots.txt` at build time
+- Social preview image: `public/og-image.png`
