@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function Nav() {
             </a>
           </li>
         </ul>
+        <ThemeToggle />
         <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
           <span /><span /><span />
         </button>

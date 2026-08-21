@@ -21,10 +21,10 @@ export default function Certifications() {
           </p>
           <div className="grid-2">
             {certs.map((c) => (
-              <div className="card" key={c.id} style={c.featured ? { borderColor: "#0f766e40" } : undefined}>
+              <div className="card" key={c.id} style={c.featured ? { borderColor: "var(--accent-soft)" } : undefined}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap" }}>
                   <h3 className="display" style={{ fontWeight: 800, fontSize: "1.05rem" }}>{c.name}</h3>
-                  <span className="mono" style={{ color: "var(--teal)" }}>{c.date}</span>
+                  <span className="mono" style={{ color: "var(--accent)" }}>{c.date}</span>
                 </div>
                 <div style={{ fontSize: 14, color: "var(--slate)", margin: "6px 0 12px" }}>{c.issuer}</div>
                 <div className="mono" style={{ color: "var(--slate)", textTransform: "none", letterSpacing: "0.04em" }}>ID: {c.id}</div>

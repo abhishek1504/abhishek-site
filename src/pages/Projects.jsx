@@ -43,7 +43,7 @@ export default function Projects() {
           <div className="grid-2" style={{ marginBottom: 64 }}>
             {steps.map(({ step, desc }, i) => (
               <div className="card" key={step}>
-                <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>Stage {i + 1} · {step}</div>
+                <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>Stage {i + 1} · {step}</div>
                 <p style={{ fontSize: 15, color: "var(--slate)" }}>{desc}</p>
               </div>
             ))}

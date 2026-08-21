@@ -1,6 +1,6 @@
 # abhisheksharma.dev
 
-Personal portfolio site for Abhishek Sharma — AVP · Technical Product Manager · Engineering Leader.
+Personal portfolio site for Abhishek Sharma — AVP Engineering · Full-Stack & AI Engineering Leader.
 
 Built with React. Deployable to GitHub Pages or Netlify.
 
@@ -43,15 +43,15 @@ For custom domain on GitHub Pages:
 ## Updating Your Content
 
 All content is in `src/pages/`. Each page is a single file:
-- `Home.jsx` — landing page
-- `About.jsx` — bio + stats
-- `Work.jsx` — career timeline (update this when jobs change)
-- `Chess.jsx` — chess story + brand
-- `Running.jsx` — running lifestyle + brand
-- `Contact.jsx` — email, LinkedIn, social links
+- `Home.jsx` — landing page (hero, stats, pillars, featured project)
+- `Work.jsx` — brands/products grid, career timeline, education (update this when jobs change)
+- `Projects.jsx` — featured project deep-dive + other projects
+- `Certifications.jsx` — certifications list
+- `Contact.jsx` — email, phone, LinkedIn, GitHub, resume link
 
-Update your Chess.com URL in `Chess.jsx` and social handles in `Contact.jsx`.
+## Design Tokens & Theme
 
-## Design Tokens
-
-Colors and fonts are in `src/styles.css` under `:root`. Change `--gold` to adjust the accent color across the whole site.
+Colors, spacing, and type are defined in `src/styles.css` under `:root` (light theme) and
+`[data-theme="dark"]` (dark theme). Change `--accent` / `--accent2` to adjust the accent
+colors across the whole site. The theme toggle lives in `src/components/ThemeToggle.jsx`
+and persists the visitor's choice to `localStorage`.

@@ -23,8 +23,8 @@ const pillars = [
     desc: "Founded and led mobility teams, managed vendors, and delivered production apps for KFC, Kohl's, Tractor Supply, Wallenius Wilhelmsen, and Hindustan Unilever.",
   },
   {
-    title: "Technical product management",
-    desc: "At Gajigesa (Kredivo Group), I own the product lifecycle end to end — roadmap, UX design, delivery, and performance — reporting to the Head of Engineering.",
+    title: "Engineering & product ownership",
+    desc: "At Gajigesa (Kredivo Group), I own engineering delivery and the product lifecycle end to end — roadmap, UX design, delivery, and performance — reporting to the Head of Engineering.",
   },
   {
     title: "Applied AI",
@@ -38,14 +38,14 @@ export default function Home() {
       {/* ── Hero ── */}
       <header className="hero">
         <div className="wrap">
-          <div className="mono eyebrow">AVP · Technical Product Manager · Hyderabad, India</div>
+          <div className="mono eyebrow">AVP Engineering · Hyderabad, India</div>
           <h1 className="hero-name">
             Seventeen years of<br />shipping products —<br />
             <em>and still curious.</em>
           </h1>
           <p className="hero-desc">
-            I'm Abhishek Sharma. I lead product and engineering at Gajigesa (a Kredivo
-            Group company) — owning development, UX, and optimization for a consumer
+            I'm Abhishek Sharma. I lead engineering at Gajigesa (a Kredivo
+            Group company) — owning delivery, UX, and performance for a consumer
             fintech platform. Before that: mobile and web products for some of the
             world's most recognized brands.
           </p>

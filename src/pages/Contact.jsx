@@ -6,20 +6,24 @@ export default function Contact() {
           <div className="mono eyebrow">Let's talk</div>
           <h1 className="section-title">Open to senior<br />leadership roles.</h1>
           <p className="lede" style={{ marginBottom: 48 }}>
-            Engineering Manager · AVP Engineering · Technical Product Manager ·
+            AVP Engineering · Engineering Manager · Full-Stack Engineering ·
             AI Engineering Leadership — in Hyderabad or remote.
           </p>
-          <div className="grid-3">
+          <div className="grid-2">
             <a href="mailto:abhisheksharma.dsc@gmail.com" className="card" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>Email</div>
+              <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>Email</div>
               <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>abhisheksharma.dsc@gmail.com</div>
             </a>
+            <a href="tel:+919811283725" className="card" style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>Phone</div>
+              <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>+91 98112 83725</div>
+            </a>
             <a href="https://www.linkedin.com/in/abhishekmca" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>LinkedIn</div>
+              <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>LinkedIn</div>
               <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>linkedin.com/in/abhishekmca</div>
             </a>
             <a href="https://github.com/abhishek1504" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="mono" style={{ color: "var(--teal)", marginBottom: 10 }}>GitHub</div>
+              <div className="mono" style={{ color: "var(--accent)", marginBottom: 10 }}>GitHub</div>
               <div className="display" style={{ fontWeight: 700, fontSize: 15 }}>github.com/abhishek1504</div>
             </a>
           </div>
