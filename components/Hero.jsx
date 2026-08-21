@@ -1,4 +1,4 @@
-import { evolution, site, stats } from "../lib/content";
+import { embeddedWith, site, stats } from "../lib/content";
 
 export default function Hero() {
   return (
@@ -11,9 +11,10 @@ export default function Hero() {
           <em className="italic text-accent">and own what happens after.</em>
         </h1>
         <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-slate">
-          I&apos;m {site.name}. Seventeen years turning ambiguous requirements
-          into shipped software — inside enterprise clients like KFC, Kohl&apos;s,
-          and Tractor Supply, and now leading engineering end-to-end at a
+          I&apos;m {site.name}. I embed inside client engineering teams and
+          ship production software on their timeline — not mine.
+          I&apos;ve done it for KFC, Kohl&apos;s, Tractor Supply, and
+          Wallenius Wilhelmsen, and today I run engineering end-to-end at a
           consumer fintech platform serving 25,000+ monthly users.
         </p>
 
@@ -26,17 +27,17 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stack evolution timeline */}
+        {/* Embedded with — forward deployed evidence */}
         <div className="mt-16">
           <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-slate">
-            One career, seven stacks — I learn whatever the product needs
+            Embedded inside the client&apos;s team — not consulting from outside
           </div>
           <div className="flex gap-8 overflow-x-auto pb-2">
-            {evolution.map(({ year, tech }) => (
-              <div key={year} className="flex min-w-[128px] flex-col gap-2 border-l border-line pl-4">
+            {embeddedWith.map(({ name, role }) => (
+              <div key={name} className="flex min-w-[168px] flex-col gap-2 border-l border-line pl-4">
                 <div className="h-1.5 w-1.5 -ml-[19px] rounded-full bg-accent" />
-                <div className="font-mono text-xs text-slate">{year}</div>
-                <div className="font-display text-sm text-ink">{tech}</div>
+                <div className="font-display text-sm text-ink">{name}</div>
+                <div className="font-mono text-[11px] text-slate">{role}</div>
               </div>
             ))}
           </div>

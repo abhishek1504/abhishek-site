@@ -9,9 +9,9 @@ export default function Experience() {
           Experience
         </h2>
         <p className="mt-5 max-w-xl text-[15.5px] leading-relaxed text-slate">
-          Seventeen years across fintech, e-commerce, retail, logistics, QSR,
-          and HR tech — from writing payroll engines to leading product and
-          engineering.
+          Embedded inside client engineering teams across fintech,
+          e-commerce, retail, logistics, QSR, and HR tech — from writing
+          payroll engines on-site to leading product and engineering.
         </p>
 
         {/* Brands */}
